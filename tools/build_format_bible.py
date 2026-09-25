@@ -116,8 +116,8 @@ story += [P("0. Locked Canon (Story Rules)", h1),
             "produced for <i>Beyond the Crest</i>. They do not change unless the showrunner "
             "changes them in writing."),
           *bullets([
-              "<b>Story frame year:</b> 2005 is our storytelling “present.” We proceed "
-              "forward in time from there.",
+              "<b>Story frame year:</b> 2026 is our storytelling “present.” The story "
+              "begins on the premiere date and moves forward in real time from there.",
               "<b>In-universe start date:</b> Monday, January 5, 2026 (Episode #0001).",
               "<b>Storytelling formats:</b> Hollywood trade and news-media articles and "
               "headlines, social media, internet coverage, and heavy character-driven "
