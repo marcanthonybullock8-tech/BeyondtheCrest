@@ -477,7 +477,8 @@ EPISODES = [
      "by side.",
      "EM VI LY TR JC AB EV MA ES AM HD NA MQ"),
     (False, None,
-     "Victor tells Joan he'll name his successor as Chairman at his 80th. Friday hook: "
+     "Victor tells Joan he'll retire at his 80th: Natasha will become Chairwoman, and "
+     "he'll name the next CEO. Friday hook: "
      "Joan: “Then I need to tell you about Gus.” Victor: “After the "
      "party.”",
      "VD JD WO PR"),
@@ -495,8 +496,9 @@ EPISODES = [
      "House rehearsal dinner, and Martin gives a toast that sounds like a threat.",
      "VD JD NB RB JO PO MA EL JJ GR MO ML AL AM AR LY WO PR"),
     (True, "Sat, May 30",
-     "Victor Donohue's 80th birthday gala. He begins his announcement, “My successor "
-     "as Chairman will be—” and collapses.",
+     "Victor Donohue's 80th birthday gala. He begins his announcement: “Tonight I'm "
+     "announcing my retirement, and the next CEO of The Donohue Company will "
+     "be—” and collapses.",
      "VD JD NB RB JO PO MA EL JJ GR MO ML AL AM AR HD LY EC WO PR LG"),
     # ---------- WEEK 22 ----------
     (False, None,
@@ -508,7 +510,8 @@ EPISODES = [
      "first words: “Where's my announcement?”",
      "NB VD JD RB MA EL GR EC JO"),
     (False, None,
-     "Alvin and Jasmine plot to challenge the Crown Voting Trust while Victor recovers.",
+     "Alvin and Jasmine start counting votes: if Victor dies in office, Section 7 of "
+     "the Crown Voting Agreement puts the family's bloc in Jasmine's hands.",
      "AL JO MO PO"),
     (False, None,
      "Esther visits Victor's hospital room alone. He knows exactly who she is: “Your "

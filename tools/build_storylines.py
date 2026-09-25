@@ -125,18 +125,19 @@ ARCS = [
      "suspense is which family member will find out, and what they'll do.",
      "Deuce is free. The killer is untouched. Robert now knows who pays his bills."),
     ("5. The Succession Covenant",
-     "Victor names Marc heir apparent and promises to name his next Chairman on his 80th "
-     "birthday.",
+     "Victor names Marc heir apparent. If Victor retires, Natasha becomes Chairwoman "
+     "and the CEO seat opens. Marc is the obvious choice, but nothing is guaranteed.",
      "Victor, Joan, Natasha, Jasmine, Martin, Marc, Alvin",
      ["The Covenant (#0001). Jasmine storms Victor's study (#0002).",
       "Victor gives Marc the key to the 1939 press (#0009).",
-      "The 80th birthday gala: “My successor as Chairman will be—” and "
-      "Victor collapses (#0101).",
-      "Surgery (#0102). Alvin and Jasmine move on the Crown Voting Trust while Victor is "
-      "down (#0104)."],
+      "Victor plans to retire at his 80th and name the next CEO (#0097).",
+      "The 80th birthday gala: “Tonight I'm announcing my retirement, and the next "
+      "CEO of The Donohue Company will be—” and Victor collapses (#0101).",
+      "Surgery (#0102). If Victor dies in office, Section 7 hands the family's votes to "
+      "Jasmine. She and Alvin start counting them (#0104)."],
      "The whole season's power struggle hangs on one unfinished sentence.",
-     "Still unspoken. Theodore arrives to claim that the 1976 succession was never "
-     "valid."),
+     "Victor hasn't retired, and the CEO name is still unspoken. Theodore arrives to "
+     "claim that the 1976 succession was never valid."),
     ("6. The EGOT Year",
      "Mother and son chase the last awards they're missing in the same season.",
      "Natasha, Marc, Victor, Joan, Grace, Nia, Sebastian",

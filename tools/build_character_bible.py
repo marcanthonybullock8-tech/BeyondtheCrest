@@ -282,8 +282,9 @@ CHARACTERS = [
         ],
         secrets=[
             "Suspects Marc-Anthony has a second life. She has chosen not to ask.",
-            "Is grooming Marc to succeed her, which makes her Jasmine's rival as well as "
-            "her sister.",
+            "If Victor ever steps down or retires, she becomes Chairwoman and the CEO seat "
+            "goes vacant. She's grooming Marc to fill it, which makes her Jasmine's rival "
+            "as well as her sister.",
         ],
         voice=("NATASHA", ("", "Rules are just suggestions written by people who were "
                            "scared of me.")),
@@ -646,6 +647,10 @@ story += [P("The World of the Show", h1),
               ["1976 – 2006", "Alexander, Chairman • Victor, CEO"],
               ["2006 – present", "Victor, Chairman • Natasha, CEO • "
                                       "Marc-Anthony, Primary Heir Apparent"],
+              ["If Victor steps down or retires", "Natasha becomes Chairwoman \u2022 The CEO "
+                                                  "seat goes vacant \u2022 Marc-Anthony is "
+                                                  "the obvious successor, but nothing is "
+                                                  "guaranteed"],
           ], [1.6 * inch, 4.9 * inch]),
           Spacer(1, 6),
           P("Family founders (deceased)", h2),

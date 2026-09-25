@@ -249,9 +249,14 @@ story += [
         f"IPO, it binds every Class B holder to vote as one bloc ({bloc_vote:.1%} of the "
         f"company) as directed by the Chairman. Victor's own shares carry "
         f"{victor_vote:.1%}, but through the Agreement he steers the whole bloc.",
-        "<b>Section 7 of the Agreement.</b> The sitting Chairman may designate the next "
-        "person to direct the bloc. If he dies without a designation, it passes to the "
-        "eldest child. That's Jasmine, and after her, Martin.",
+        "<b>The Line of Succession.</b> If Victor ever steps down or retires, Natasha "
+        "becomes Chairwoman and the CEO seat is left vacant for the board to fill. "
+        "Marc-Anthony, as President &amp; COO, is the obvious successor to the CEO seat. "
+        "But this is a daytime soap opera, and nothing is guaranteed.",
+        "<b>Section 7 of the Agreement.</b> The Chair directs the family's voting bloc. "
+        "But if Victor dies in office instead of retiring, Section 7 hands direction of "
+        "the bloc to the eldest child, Jasmine, and after her, Martin. That would leave "
+        "Natasha in the Chair while her sister controls the votes that can remove her.",
         "<b>The 1976 Stripping.</b> When Victor was made CEO, Alexander converted "
         "Theodore's Class B shares into Class A: the branch kept the money and lost the "
         "vote. Theodore has contested it privately for fifty years.",
@@ -262,7 +267,8 @@ story += [
         "Dynasty Trust beneficiary. Every paternity claim against Alvin is a claim on the "
         "fortune.",
         "<b>Victor's 80th (Saturday, May 30, 2026).</b> Victor planned to announce his "
-        "Section 7 designation that night. He collapsed before he could say the name.",
+        "retirement that night, making Natasha Chairwoman, and to name his choice for "
+        "CEO. He collapsed before he could say the name.",
     ]),
     P("Net worth check (as of January 5, 2026)", h2),
     table([
