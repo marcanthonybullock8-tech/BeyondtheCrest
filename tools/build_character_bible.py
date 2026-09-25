@@ -223,7 +223,7 @@ CHARACTERS = [
             "Born after years of loss, and treated like a treasure ever since.",
             "Emory undergrad, then Goizueta MBA. Took over her father's office at 24 and "
             "doubled its revenue.",
-            "Planning to launch a luxury beauty &amp; wellness brand with her cousin Grace.",
+            "Planning to launch HEIRLOOM, a luxury beauty &amp; wellness brand, with her cousin Grace on June 5, 2026.",
         ],
         secrets=[
             "Caught between her brother's war and her love for her Bullock cousins.",
@@ -245,7 +245,7 @@ CHARACTERS = [
             "stared down Victor Donohue and kept his job.",
         back=[
             "Raised in southwest Atlanta by a single mother who cleaned offices on Peachtree. "
-            "Clark Atlanta, then Howard Law, on scholarship and spite.",
+            "Clark College, then Howard Law, on scholarship and spite.",
             "Met Natasha when she was 18 and he was 30. Their relationship scandalized the "
             "Donohues. Elxa was born in August 1990, and he married Natasha in June 1991 "
             "while she was pregnant with Marc-Anthony. Victor still calls it “the "
@@ -344,9 +344,10 @@ CHARACTERS = [
             "Summer 2010: a predatory developer and a ring of crooked officials destroyed "
             "Amond's family's business, and the courts shrugged. Marc, 18, took them apart "
             "in 90 days using money, intelligence, and pressure. On Saturday, September 18, "
-            "2010, he founded <b>The Blackwater Syndicate</b>: a shadow network of "
-            "intelligence, finance, security, and “fixers” that delivers justice "
-            "where the law won't.",
+            "2010, he founded <b>The Blackwater Syndicate</b>. It grew into a 100% criminal "
+            "organization, a true mafia with a code, and the largest criminal organization "
+            "in the world. On October 3, 2011, he founded its legitimate twin, <b>Blackwater "
+            "Security International (BSI)</b>. See Document 05.",
             "Saturday, September 3, 2011: at a Labor Day weekend party at a Lake Lanier "
             "estate, a very drunk 19-year-old Marc spent the night with a girl in a gold "
             "dress. He never learned her name and barely remembers the night. It was Esther "
@@ -367,9 +368,9 @@ CHARACTERS = [
               "them. The cruelest irony in Belmont Crest is that two of the girls who "
               "raid his kitchen every weekend are his own daughters, and he has no idea.",
         secrets=[
-            "<b>Blackwater.</b> Only Amond (his underboss), Arianna (who keeps plausible "
-            "deniability), and Grace (who'd hide a body for him) know. His sister the Chief of "
-            "Police does not.",
+            "<b>Blackwater.</b> Only the Table (his inner council, including Amond as "
+            "underboss), Arianna (who keeps plausible deniability), and Grace (who'd hide a "
+            "body for him) know. His sister the Chief of Police does not.",
             "<b>Emma &amp; Victoria.</b> He has ZERO idea he is their father.",
         ],
         voice=("MARC-ANTHONY", ("warm smile, eyes gone cold", "I love everybody, man. "
@@ -386,7 +387,7 @@ CHARACTERS = [
             "the hip since she could walk.",
         back=[
             "Broadway at 19. Won the Tony at 23 and a Primetime Emmy at 27.",
-            "Launching a luxury beauty &amp; wellness brand with Mallory. It's her first "
+            "Launching HEIRLOOM, a luxury beauty &amp; wellness brand, with Mallory. It's her first "
             "venture outside the family business.",
         ],
         secrets=[
@@ -458,13 +459,13 @@ CHARACTERS = [
              "Victoria • Best friend and sister of Harmony Divine • Destined "
              "soulmate: Marc-Anthony Bullock",
         who="The Ice Queen. Widely called the most beautiful woman in the world, all "
-            "natural, and 1000% ruthless and corrupt. Esther runs Smilley Corporation "
-            "(luxury real estate, hospitality, and Smilley Beauty) with surgical cruelty. "
-            "Her parents chose her, the baby, as heir over her older siblings, and she has "
-            "been at war with them ever since.",
+            "natural, and 1000% ruthless and corrupt. Esther helps run Smilley Corporation, "
+            "a consumer products, retail, and lifestyle empire, with surgical cruelty. Her "
+            "grandfather Gus chose her, the baby, as heir over her older siblings, and she "
+            "has been at war with them ever since.",
         back=[
-            "Raised in Buckhead's Tuxedo Park. The Smilleys are new-ish money who resent "
-            "Donohue old money.",
+            "Born in Manhattan. Raised in Buckhead's Tuxedo Park after the family moved to "
+            "Atlanta in 1996. The Smilleys are new-ish money who resent Donohue old money.",
             "Met Harmony in 6th grade at the Westbrook Academy in 2003, when Harmony was the "
             "scholarship kid. They have been sisters ever since.",
             "Saturday, September 3, 2011: the Lake Lanier party. Drunk, 18, in a gold dress, "
@@ -505,8 +506,9 @@ CHARACTERS = [
             "Marc-Anthony. She has never publicly said why.",
         ],
         secrets=[
-            "Knows or suspects more than anyone about Esther's twins. What she knows, and "
-            "when she learned it, is a writers' room decision (see Open Questions).",
+            "Figured out years ago that the twins are Marc-Anthony's. She has never told "
+            "Esther she knows.",
+            "Secretly writes Atlanta's most-read gossip blog, <i>The Tea Kettle ATL</i>.",
         ],
         voice=("HARMONY", ("", "Everybody in this town wants to discover talent. Nobody "
                            "wants to fund it.")),
@@ -605,14 +607,18 @@ story.append(PageBreak())
 # ---------------- SETTING ----------------
 story += [P("The World of the Show", h1),
           P("Belmont Crest", h2),
-          P("A private, gated enclave of estates on a wooded ridge above the Chattahoochee "
-            "River in north Fulton County, about 20 miles north of downtown Atlanta. "
-            "Alexander Donohue founded it in 1972, when Atlanta's old-money neighborhoods "
-            "still quietly kept Black families out. His answer was to build his own. Today "
+          P("A private, gated community of 1,240 wooded acres on a ridge above the "
+            "Chattahoochee River at Atlanta's northwestern edge, inside the city limits. "
+            "The main gate is at <b>1958 Belmont Crest Parkway NW, Atlanta, GA 30327</b>, "
+            "about 8 miles from downtown, with Buckhead's Tuxedo Park just across the ridge. "
+            "Alexander and Simone Donohue founded it on Saturday, May 17, 1958, when no "
+            "Black family could buy land there, so they bought it through a white front. "
+            "Today "
             "it is the most exclusive address in the South, home to the Donohues, the "
             "Bullocks, the Olsons, the Bakers, and the Cummingses. At the very top of the "
             "ridge sits <b>Summit House</b>, Victor and Joan's estate. Everything else in "
-            "Belmont Crest lives <i>beyond the crest</i>."),
+            "Belmont Crest lives <i>beyond the crest</i>. It also has its own country club, "
+            "founded in 1961. See Document 04."),
           P("The Donohue Company", h2),
           P("The largest multinational mass media and entertainment conglomerate on Earth. "
             "Alexander Donohue founded it on Monday, April 3, 1939, as <i>The Atlanta "
@@ -620,7 +626,8 @@ story += [P("The World of the Show", h1),
             "records, television, and eventually everything: Donohue Pictures, Donohue "
             "Broadcasting Group, Donohue Records, Donohue Publishing, Donohue streaming, "
             "theme parks, and live events. Headquartered at Donohue Tower in Midtown "
-            "Atlanta. <b>Family fortune: over $2.5 trillion.</b> The Donohues are the largest, "
+            "Atlanta. <b>Company valuation: $10 trillion. Family fortune: over $2.5 "
+            "trillion.</b> See Document 03. The Donohues are the largest, "
             "most successful, powerful, influential, respected, beloved, charitable, and "
             "wealthiest family in the world."),
           table([
@@ -633,11 +640,13 @@ story += [P("The World of the Show", h1),
           Spacer(1, 6),
           P("Family founders (deceased)", h2),
           *bullets([
-              "<b>Alexander Donohue</b> (Tue, March 3, 1914 – Mon, January 9, 2006; died "
-              "at 91). Founder of the empire and of Belmont Crest.",
-              "<b>Simone Donohue (née Batiste)</b> (Mon, August 8, 1921 – Sat, "
-              "November 22, 2014; died at 93). A New Orleans-born jazz singer and the "
-              "family's first matriarch.",
+              f"<b>Alexander Donohue</b> ({long_date(D(1916, 3, 3))} – "
+              f"{long_date(D(2006, 1, 9))}; died at 89). Founder of The Donohue Company "
+              "and co-founder of Belmont Crest.",
+              f"<b>Simone Donohue (née Batiste)</b> ({long_date(D(1910, 9, 12))} – "
+              f"{long_date(D(2014, 11, 22))}; died at 104). A New Orleans-born jazz singer "
+              "who bankrolled the first printing press, co-founded Belmont Crest, and was "
+              "the family's first matriarch.",
           ]),
           P("Aging note: “Black don't crack”", h2),
           P("Every character's <b>age</b> is exact to their birthday. Every character's "
@@ -685,17 +694,20 @@ for c in CHARACTERS:
 
 # ---------------- TIMELINE ----------------
 timeline = [
+    ("Mon, Sep 12, 1910", "Simone Batiste born, New Orleans."),
+    ("Fri, Mar 3, 1916", "Alexander Donohue born, Auburn Avenue, Atlanta."),
     ("Mon, Apr 3, 1939", "Alexander Donohue founds <i>The Atlanta Beacon</i>, the seed of "
                           "The Donohue Company."),
     ("Mon, Jul 31, 1944", "Theodore Donohue born."),
     ("Thu, May 30, 1946", "Victor Donohue born."),
+    ("Sat, May 17, 1958", "Alexander &amp; Simone found Belmont Crest."),
+    ("Sat, Jun 17, 1961", "Belmont Crest Country Club opens."),
     ("Sat, Apr 17, 1948", "Joan Mercer born, Macon, GA."),
     ("Tue, Feb 10, 1959", "Robert Bullock born."),
     ("Sat, Jun 14, 1969", "Victor marries Joan Mercer."),
     ("Thu, Nov 13, 1969", "Peter Olson born."),
     ("Mon, Mar 23, 1970", "Jasmine Donohue born."),
     ("Wed, Jun 2, 1971", "Natasha Donohue born."),
-    ("1972", "Alexander founds Belmont Crest; Summit House completed."),
     ("Mon, Jan 5, 1976", "Victor named CEO over Theodore."),
     ("Wed, Oct 8, 1980", "Alvin Donohue born."),
     ("1981", "Theodore becomes Fulton County DA (serves through 1996)."),
@@ -716,13 +728,14 @@ timeline = [
     ("1998", "Marc-Anthony's screen debut at 6."),
     ("2003", "Esther &amp; Harmony meet in 6th grade at Westbrook Academy."),
     ("Sat, Dec 25, 2004", "Victor toasts Marc as heir; Martin pushes Marc down the stairs."),
-    ("Mon, Jan 9, 2006", "Alexander dies at 91. Victor becomes Chairman; Natasha becomes CEO."),
+    ("Mon, Jan 9, 2006", "Alexander dies at 89. Victor becomes Chairman; Natasha becomes CEO."),
     ("2010 (summer)", "Baker family business destroyed; Marc takes the conspirators apart."),
     ("Sat, Sep 18, 2010", "Marc-Anthony, 18, founds The Blackwater Syndicate (SECRET)."),
     ("Sat, Sep 3, 2011", "Lake Lanier Labor Day party: Marc (19) &amp; Esther (18)."),
+    ("Mon, Oct 3, 2011", "Marc-Anthony, 19, founds Blackwater Security International (BSI)."),
     ("Fri, Apr 20, 2012", "Lyric Solace Baker born; Marc named godfather."),
     ("Thu, May 10, 2012", "Emma &amp; Victoria Smilley born; IVF cover story begins."),
-    ("Sat, Nov 22, 2014", "Simone Donohue dies at 93."),
+    ("Sat, Nov 22, 2014", "Simone Donohue dies at 104."),
     ("Sun, Sep 18, 2016", "Marc wins his Emmy."),
     ("Sun, Jun 10, 2018", "Marc nominated for a Tony; loses."),
     ("Sun, Feb 10, 2019", "Marc wins his Grammy (Amond's 27th birthday)."),
@@ -744,10 +757,10 @@ story += [PageBreak(), P("Master Backstory Timeline", h1),
 story += [P("Secrets Ledger: Who Knows What (as of 1/5/2026)", h1),
           table([
               ["Secret", "Knows", "Does NOT know"],
-              ["Marc-Anthony runs Blackwater", "Marc, Amond, Arianna (no details), Grace",
+              ["Marc-Anthony runs Blackwater", "Marc, the Table (incl. Amond), Arianna (no details), Grace",
                "Everyone else, including Elxa. Jeremy is hunting it. Natasha suspects."],
               ["Marc is Emma &amp; Victoria's father", "Esther",
-               "Marc, the twins, the Smilleys, the Donohues. Harmony: see Open Questions."],
+               "Marc, the twins, the Smilleys, the Donohues. (Harmony and Loretta have figured it out and said nothing.)"],
               ["Why Marc has custody of Lyric", "Sealed; Amond &amp; Harmony know",
                "Marc, and everyone else"],
               ["Arianna's buried skeletons", "Arianna, Marc", "Everyone else"],
@@ -766,28 +779,24 @@ story += [P("Continuity Fixes Applied", h1),
               "Elxa was born August 1990 and her parents married June 1991. That is kept as "
               "canon and used as a story point, since Elxa was born before the wedding.",
           ]),
-          P("Open Questions for the Showrunner", h1),
-          P("These are proposals only. Nothing here is canon until you approve it.", italic),
+          P("Working Canon Adopted From Earlier Proposals", h1),
+          P("You didn't veto these, so Documents 03\u201309 use them. Say the word and "
+            "any of them changes.", italic),
           *bullets([
-              "<b>“Spoiled by him endlessly.”</b> The twins can't know Marc is their "
-              "father, so the writers' room made him “Uncle Marc” through Lyric. "
-              "He spoils them every time they're at his house, without knowing why he "
-              "feels so connected to them. Approve?",
-              "<b>Lyric's custody.</b> Why did the sealed order go to Marc and not Amond? "
-              "(A) Harmony knows the twins' secret and wanted them near their father. "
-              "(B) A crisis in 2021 that Amond and Harmony swore never to tell. (C) Victor or "
-              "Joan quietly arranged it. Recommendation: B, with A revealed later as the "
-              "hidden layer.",
-              "<b>Does Harmony know about the twins?</b> Recommendation: she figured it "
-              "out years ago and has never told Esther she knows.",
-              "<b>The Smilley family.</b> Proposed supporting cast: patriarch <b>Leonard "
-              "Smilley</b>, matriarch <b>Celeste Smilley</b>, eldest son <b>Nathaniel</b> "
-              "(b. Thu, Mar 14, 1985; 40), and middle child <b>Camille</b> (b. Wed, Nov 2, "
-              "1988; 37).",
-              "<b>Grace &amp; Mallory's business.</b> Proposed as a luxury beauty &amp; "
+              "<b>\u201cUncle Marc.\u201d</b> The twins know Marc through Lyric and he "
+              "spoils them endlessly without knowing why he feels so connected to them.",
+              "<b>Harmony knows about the twins</b>, and has never told Esther she knows.",
+              "<b>The Smilley family</b> is fully built out in Document 06.",
+              "<b>Grace &amp; Mallory's business</b> is HEIRLOOM, a luxury beauty &amp; "
               "wellness brand in direct competition with Smilley Beauty.",
-              "<b>Jasmine's party affiliation</b> and <b>Theodore's family</b> are left open "
-              "for now.",
+          ]),
+          P("Still Open", h1),
+          *bullets([
+              "<b>Lyric's custody.</b> The real reason stays sealed through Season 1 and is "
+              "teased for Season 2. Recommendation: a 2021 crisis Amond and Harmony swore "
+              "never to tell, with Harmony wanting the twins near their father as the "
+              "hidden layer.",
+              "<b>Jasmine's party affiliation.</b>",
           ]),
           ]
 
