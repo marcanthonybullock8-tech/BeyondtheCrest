@@ -104,6 +104,8 @@ CAST = {
            "FBI Special Agent in Charge, Atlanta"),
     "BK": ("Brielle Knox", D(1990, 3, 9), None, RECURRING, "Media",
            "Host, “Hollywood Heat”; Martin's girlfriend"),
+    "CH": ("State Rep. Cordell Haynes", D(1976, 8, 3), None, RECURRING, "Politics",
+           "Arianna's primary challenger for Attorney General"),
     "MP": ("State Sen. Marcus Pryor", D(1980, 1, 11), None, RECURRING,
            "Politics", "Jasmine's primary challenger"),
     "LG": ("Lucinda Graves", D(1952, 1, 27), None, RECURRING, "Belmont Crest",
@@ -226,7 +228,7 @@ PARTY = {
     "IV": REP, "CO": "Not a U.S. citizen", "LF": "Not a U.S. citizen", "CW": REP,
     "TB": "Not registered",
     # Law, politics, media
-    "WJ": IND, "RD": DEM, "FB": IND, "JK": IND, "MP": DEM, "JH": IND, "BK": REP,
+    "WJ": IND, "RD": DEM, "FB": IND, "JK": IND, "MP": DEM, "CH": DEM, "JH": IND, "BK": REP,
     # Belmont Crest, Westbrook, Broadway, Alvin's world, underworld
     "LG": REP, "WO": "Not a U.S. citizen (British)", "MF": DEM, "PW": DEM, "PR": DEM,
     "AB": IND, "EV": DEM, "SC": "Not a U.S. citizen (British)", "NV": DEM,

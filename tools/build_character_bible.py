@@ -447,6 +447,10 @@ CHARACTERS = [
             "Belmont Crest Three.",
             "Harvard Law at 22. Elected DA at 28. Appointed Attorney General at 32 when the "
             "sitting AG resigned in scandal.",
+            "Georgia elects its attorney general, so to keep the job she must win the 2026 "
+            "election: the Democratic primary on Tuesday, May 19, then the general "
+            "election on Tuesday, November 3. Her primary opponent is her former deputy, "
+            "State Rep. Cordell Haynes.",
         ],
         secrets=[
             "Has skeletons in her closet that Marc helped her bury. The truth is sealed in "

@@ -247,8 +247,10 @@ EPISODES = [
      "happened.",
      "GR KM MA NS"),
     (False, None,
-     "Julian and Journee's first date. Friday hook: Arianna sees them together.",
-     "JU JH AR MA"),
+     "Qualifying closes at noon. Arianna files for her first election, and at 11:58 AM "
+     "State Rep. Cordell Haynes files to challenge her in the Democratic primary. That "
+     "night, Julian and Journee's first date. Friday hook: Arianna sees them together.",
+     "JU JH AR MA CH"),
     # ---------- WEEK 10 ----------
     (False, None,
      "Arianna begs Julian to end it, and he refuses. Marc to Arianna: “Tell the "
@@ -352,8 +354,8 @@ EPISODES = [
      "CA DS ML GR DE LE"),
     (False, None,
      "Journee's Part 3 names the prosecutor who closed the 2021 file. Arianna's poll "
-     "numbers wobble.",
-     "JH AR JU MA HC"),
+     "numbers wobble, and Cordell Haynes starts quoting the story in every speech.",
+     "JH AR JU MA HC CH"),
     (False, None,
      "Harmony's film finally gets funded, by a mysterious investor: Nathaniel Smilley.",
      "HD NA AM ES CD LD"),
@@ -432,8 +434,9 @@ EPISODES = [
      "EM VI ES MA LY CE LE GS LO HD TR NA MQ"),
     (False, None,
      "Kettle posts the garden photos. Gus sees Marc with his great-granddaughters and "
-     "smashes a glass.",
-     "GS ES LE HD CA LO"),
+     "smashes a glass. On WDON's live primary debate, Haynes asks Arianna about 2021 to "
+     "her face. She doesn't blink, but her hands shake under the podium.",
+     "GS ES LE HD CA LO AR CH JH"),
     (False, None,
      "Elxa finds a Blackwater ledger page listing “R.B. — retainer.” She's "
      "sure it means her father.",
@@ -448,12 +451,15 @@ EPISODES = [
      "MO BK ES NA"),
     # ---------- WEEK 20 ----------
     (False, None,
-     "Primary eve: Alvin delivers Pryor's secrets, courtesy of Morrow.",
-     "AL JO VM MP PO"),
+     "Primary eve: Alvin delivers Pryor's secrets, courtesy of Morrow. Arianna asks Marc "
+     "whether Haynes can find anything. Marc: \u201cNot unless I let him.\u201d",
+     "AL JO VM MP PO AR MA"),
     (False, None,
      "Georgia primary night: Jasmine 48.6%, Pryor 44.1%. She's forced into a June 16 "
-     "runoff.",
-     "JO PO ML MO MP AL VD NB BK"),
+     "runoff. Across town, Arianna beats Haynes 61% to 39% and wins the Democratic "
+     "nomination for Attorney General. Two victory parties, one sore loser, and Journee "
+     "in the back of the room taking notes.",
+     "JO PO ML MO MP AL VD NB BK AR CH JH JU"),
     (False, None,
      "Zion Reed, 21, walks into Alvin's club: “I think you're my father.”",
      "ZR AL CL MF"),

@@ -134,6 +134,16 @@ SECTIONS = [
          "ambitious, and Martin's girlfriend and hired gun.",
          ["Digs into the twins' birth records for Martin (Ep #0092)."],
          ("BRIELLE", ("", "I don't report the news, baby. I schedule it."))),
+        ("CH", "The Other Challenger. Cordell Haynes is a former Fulton County prosecutor "
+         "turned state representative. He's polished, righteous, and convinced Arianna "
+         "cut corners as DA. He's right, and he can't prove it.",
+         ["Worked under Arianna in the DA's office until she passed him over for chief "
+          "deputy in 2022.",
+          "Files against her at 11:58 AM on the last day of qualifying (Ep #0045). Asks "
+          "her about 2021 on live TV (Ep #0089). Loses the primary 39% to 61% "
+          "(Ep #0094), and doesn't go away."],
+         ("HAYNES", ("", "Eleven days, Madam Attorney General. You closed a man's death "
+                         "in eleven days. I'd like to know why."))),
         ("MP", "The Challenger. Marcus Pryor is a charismatic state senator who "
          "challenges Jasmine in the primary. He's secretly bankrolled by Leonard Smilley.",
          ["Forces Jasmine into a runoff (Ep #0094). His affair is exposed by Kettle "

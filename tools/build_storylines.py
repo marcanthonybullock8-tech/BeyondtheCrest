@@ -164,15 +164,20 @@ ARCS = [
     ("8. Madam President?",
      "The Attorney General's 2028 dream versus the reporter whose father her brother "
      "killed.",
-     "Arianna, Julian, Journee, Marc, Harold &amp; Evelyn Cummings",
+     "Arianna, Julian, Journee, Marc, Cordell Haynes, Harold &amp; Evelyn Cummings",
      ["Arianna announces her plans (#0005). Journee starts digging (#0014).",
+      "<b>The AG primary:</b> Cordell Haynes files against her at 11:58 AM on the last "
+      "day of qualifying (#0045), turns Journee's reporting into a campaign weapon "
+      "(#0070), and asks about 2021 on live TV (#0089). Arianna wins 61% to 39% on "
+      "primary night (#0094), the same night Jasmine is forced into a runoff.",
       "Journee meets Julian at a grief group (#0028). They fall in love (#0045, #0129).",
       "Arianna asks Marc to make Journee go away, and he refuses (#0078).",
       "Arianna learns Marc still has the car (#0144). Journee finds Julian's name "
       "(#0162), and Julian confesses (#0169)."],
      "A love story between a grieving daughter and the man who killed her father, played "
      "entirely in daylight.",
-     "Journee knows. Arianna's campaign, and her secret, are on a fuse."),
+     "Arianna is the Democratic nominee for Attorney General. Journee knows. The "
+     "November general election, and her secret, are on a fuse."),
     ("9. The Tea Kettle",
      "The broke filmmaker nobody takes seriously is secretly the most-read gossip blogger "
      "in Atlanta.",

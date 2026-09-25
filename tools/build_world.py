@@ -144,7 +144,9 @@ story += [
          "Appointed Arianna Cummings Attorney General"],
         ["Attorney General (D)", "Arianna Cummings (b. Oct 25, 1992; 33)",
          "Appointed Mon, Mar 17, 2025, after Attorney General Bradley Keane resigned in a "
-         "bribery scandal. Faces her first statewide election in November 2026"],
+         "bribery scandal. Georgia elects its AG, so she must win in 2026: she beats State "
+         "Rep. Cordell Haynes in the May 19 Democratic primary (Ep #0094) and faces "
+         "Republican nominee Grant Hollister, a former U.S. Attorney, on November 3"],
         ["Fulton County District Attorney (D)", "Colette Barnes (b. Apr 30, 1979; 46)",
          "Arianna's former chief deputy, appointed interim DA in 2025. Loyal to Arianna, "
          "for now"],
@@ -358,10 +360,11 @@ cal2026 = [
     (D(2026, 1, 19), "Martin Luther King Jr. Day", "#0011"),
     (D(2026, 2, 8), "The Super Bowl", "#0026 (morning after)"),
     (D(2026, 2, 14), "Belmont Crest Valentine's Ball", "#0031"),
+    (D(2026, 3, 6), "Candidate qualifying closes; Haynes files against Arianna", "#0045"),
     (D(2026, 3, 15), "The Academy Awards", "#0051"),
     (D(2026, 4, 5), "Easter", "#0063"),
     (D(2026, 5, 10), "Mother's Day; the twins turn 14", "#0088"),
-    (D(2026, 5, 19), "Georgia primary", "#0094"),
+    (D(2026, 5, 19), "Georgia primary: Jasmine to a runoff; Arianna wins the AG nomination", "#0094"),
     (D(2026, 5, 30), "Victor's 80th birthday gala", "#0101"),
     (D(2026, 6, 7), "The Tony Awards", "#0107"),
     (D(2026, 6, 11), "FIFA World Cup begins", "#0111"),
@@ -423,7 +426,7 @@ GROUPS = [
     ("The Smilley Family", ["GS", "LO", "LE", "CE", "DE", "NA", "MQ", "CA", "DO", "ES",
                             "DS"]),
     ("Blackwater &amp; BSI", ["EH", "KM", "NS", "DX", "CB", "QM", "IV", "CO", "LF", "CW"]),
-    ("Law, Politics &amp; Media", ["WJ", "RD", "FB", "JK", "MP", "JH", "BK"]),
+    ("Law, Politics &amp; Media", ["WJ", "RD", "FB", "JK", "MP", "CH", "JH", "BK"]),
     ("Everyone Else", ["LG", "WO", "MF", "PW", "PR", "AB", "EV", "SC", "NV", "ZR", "CL",
                        "VM", "RT"]),
 ]
