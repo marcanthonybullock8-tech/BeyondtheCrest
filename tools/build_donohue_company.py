@@ -26,7 +26,7 @@ story += [
         ["Controlling shareholder", "Donohue Global Holdings, Inc. (private family holding company)"],
         ["Industry", "Multinational mass media &amp; entertainment conglomerate"],
         ["Headquarters", "Donohue Tower, 1939 Peachtree Street NE, Midtown Atlanta, GA 30309"],
-        ["Founder", "Alexander Donohue (1916–2006), with Simone Donohue (1910–2014)"],
+        ["Founder", "Alexander Donohue (1916–2006), with Simone Donohue (1920–2014)"],
         ["Chairman", "Victor Donohue (2006–present)"],
         ["CEO", "Natasha Bullock (2006–present)"],
         ["President &amp; COO", "Marc-Anthony Bullock (named Mon, Jan 5, 2026)"],
@@ -47,9 +47,9 @@ story += [
       "at night. By 12, Alexander was selling newspapers on street corners, "
       "and he noticed that none of the papers he sold told his neighbors' stories. By 20 he "
       "was setting type at a Black-owned print shop. At 23 he started his own paper."),
-    P("He met <b>Simone Batiste</b>, a New Orleans jazz singer six years his senior, when "
-      "she played the Top Hat Club on Auburn Avenue in 1938. She bankrolled the first printing press with "
-      "her savings from three years of nightclub tours. They married on "
+    P("He met <b>Simone Batiste</b>, a New Orleans jazz singer four years his junior, when "
+      "she played the Top Hat Club on Auburn Avenue in 1938. She had been singing in "
+      "clubs since she was 14, and she bankrolled the first printing press with her savings. They married on "
       + long_date(D(1941, 6, 7)) + ". Alexander called her “my first investor and my "
       "only partner,” and meant it."),
 

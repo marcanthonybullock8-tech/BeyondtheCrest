@@ -174,8 +174,8 @@ CAST = {
     # ---------------- GUEST STARS ----------------
     "YA": ("Young Alexander Donohue (1958)", D(1916, 3, 3), D(2006, 1, 9),
            GUEST, "Flashback", "Founder, age 41 in 1958"),
-    "YS": ("Young Simone Donohue (1958)", D(1910, 9, 12), D(2014, 11, 22),
-           GUEST, "Flashback", "Co-founder of Belmont Crest, age 47 in 1958"),
+    "YS": ("Young Simone Donohue (1958)", D(1920, 9, 12), D(2014, 11, 22),
+           GUEST, "Flashback", "Co-founder of Belmont Crest, age 37 in 1958"),
     "YV": ("Young Victor Donohue (1958 / 1966)", D(1946, 5, 30), None, GUEST,
            "Flashback", "Ages 11 and 20"),
     "YT": ("Young Theodore Donohue (1958)", D(1944, 7, 31), None, GUEST,

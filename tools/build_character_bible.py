@@ -643,8 +643,8 @@ story += [P("The World of the Show", h1),
               f"<b>Alexander Donohue</b> ({long_date(D(1916, 3, 3))} – "
               f"{long_date(D(2006, 1, 9))}; died at 89). Founder of The Donohue Company "
               "and co-founder of Belmont Crest.",
-              f"<b>Simone Donohue (née Batiste)</b> ({long_date(D(1910, 9, 12))} – "
-              f"{long_date(D(2014, 11, 22))}; died at 104). A New Orleans-born jazz singer "
+              f"<b>Simone Donohue (née Batiste)</b> ({long_date(D(1920, 9, 12))} – "
+              f"{long_date(D(2014, 11, 22))}; died at 94). A New Orleans-born jazz singer "
               "who bankrolled the first printing press, co-founded Belmont Crest, and was "
               "the family's first matriarch.",
           ]),
@@ -694,8 +694,8 @@ for c in CHARACTERS:
 
 # ---------------- TIMELINE ----------------
 timeline = [
-    ("Mon, Sep 12, 1910", "Simone Batiste born, New Orleans."),
     ("Fri, Mar 3, 1916", "Alexander Donohue born, Auburn Avenue, Atlanta."),
+    ("Sun, Sep 12, 1920", "Simone Batiste born, New Orleans."),
     ("Mon, Apr 3, 1939", "Alexander Donohue founds <i>The Atlanta Beacon</i>, the seed of "
                           "The Donohue Company."),
     ("Mon, Jul 31, 1944", "Theodore Donohue born."),
@@ -735,7 +735,7 @@ timeline = [
     ("Mon, Oct 3, 2011", "Marc-Anthony, 19, founds Blackwater Security International (BSI)."),
     ("Fri, Apr 20, 2012", "Lyric Solace Baker born; Marc named godfather."),
     ("Thu, May 10, 2012", "Emma &amp; Victoria Smilley born; IVF cover story begins."),
-    ("Sat, Nov 22, 2014", "Simone Donohue dies at 104."),
+    ("Sat, Nov 22, 2014", "Simone Donohue dies at 94."),
     ("Sun, Sep 18, 2016", "Marc wins his Emmy."),
     ("Sun, Jun 10, 2018", "Marc nominated for a Tony; loses."),
     ("Sun, Feb 10, 2019", "Marc wins his Grammy (Amond's 27th birthday)."),
@@ -776,12 +776,10 @@ story += [P("Continuity Fixes Applied", h1),
               "match Elxa's profile. In 2004 they were both 13.",
               "“Natasha Donahue” is spelled <b>Donohue</b> throughout.",
               "Mallory is the daughter of Peter and Jasmine <b>Olson</b> (née Donohue).",
-              "Elxa was born August 1990 and her parents married June 1991. That is kept as "
-              "canon and used as a story point, since Elxa was born before the wedding.",
+              "Elxa was born August 1990 and her parents married June 1991. Confirmed by "
+              "the showrunner: Elxa was born before the wedding, and it's a story point.",
           ]),
-          P("Working Canon Adopted From Earlier Proposals", h1),
-          P("You didn't veto these, so Documents 03\u201309 use them. Say the word and "
-            "any of them changes.", italic),
+          P("Approved by the Showrunner", h1),
           *bullets([
               "<b>\u201cUncle Marc.\u201d</b> The twins know Marc through Lyric and he "
               "spoils them endlessly without knowing why he feels so connected to them.",
@@ -789,13 +787,13 @@ story += [P("Continuity Fixes Applied", h1),
               "<b>The Smilley family</b> is fully built out in Document 06.",
               "<b>Grace &amp; Mallory's business</b> is HEIRLOOM, a luxury beauty &amp; "
               "wellness brand in direct competition with Smilley Beauty.",
+              "<b>Lyric's custody.</b> The sealed order came out of a 2021 crisis that Amond "
+              "and Harmony swore never to tell. The hidden layer underneath: Harmony wanted "
+              "the twins near their real father. It stays sealed through Season 1 and is "
+              "teased for Season 2.",
           ]),
           P("Still Open", h1),
           *bullets([
-              "<b>Lyric's custody.</b> The real reason stays sealed through Season 1 and is "
-              "teased for Season 2. Recommendation: a 2021 crisis Amond and Harmony swore "
-              "never to tell, with Harmony wanting the twins near their father as the "
-              "hidden layer.",
               "<b>Jasmine's party affiliation.</b>",
           ]),
           ]

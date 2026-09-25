@@ -115,7 +115,7 @@ eras = [
     ("2000–2026: The Third Generation", [
         "2006: Alexander dies and lies in repose at the Chapel of the Crest while 30,000 "
         "people file through the gates.",
-        long_date(D(2014, 11, 22)) + ": Simone dies at 104, with the reason for her 1962 "
+        long_date(D(2014, 11, 22)) + ": Simone dies at 94, with the reason for her 1962 "
         "vote still sealed in her diary.",
         "2012: BSI takes over Belmont Crest security.",
         long_date(D(2026, 1, 5)) + ": Marc-Anthony's 34th birthday gala at Summit House. "
