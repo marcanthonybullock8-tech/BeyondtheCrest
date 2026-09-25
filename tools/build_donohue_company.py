@@ -21,9 +21,9 @@ story += [
     P("Corporate Profile", h1),
     table([
         ["Field", "Detail"],
-        ["Legal name", "Donohue Enterprises, Inc., doing business as <b>The Donohue Company</b>"],
+        ["Legal name", "<b>The Donohue Company</b>"],
         ["Ticker", "NYSE: DNHU (Class A common)"],
-        ["Controlling shareholder", "Donohue Global Holdings, Inc. (private family holding company)"],
+        ["Control", "The Donohue family, through super-voting Class B shares held directly by family trusts"],
         ["Industry", "Multinational mass media &amp; entertainment conglomerate"],
         ["Headquarters", "Donohue Tower, 1939 Peachtree Street NE, Midtown Atlanta, GA 30309"],
         ["Founder", "Alexander Donohue (1916–2006), with Simone Donohue (1920–2014)"],
@@ -94,7 +94,7 @@ eras = [
         "elder son Theodore and becomes Chairman. Theodore walks out of the boardroom and "
         "doesn't come back.",
         long_date(D(1978, 10, 16)) + ": <b>IPO</b> on the New York Stock Exchange. "
-        "Donohue Enterprises lists Class A shares and keeps super-voting Class B shares "
+        "The Donohue Company lists Class A shares and keeps super-voting Class B shares "
         "in the family.",
         "1981: Launches the <b>Crown Network</b>, a 24-hour cable channel, and starts "
         "buying stations in 30 markets.",
@@ -117,7 +117,7 @@ eras = [
         "Chairman and Natasha becomes CEO at 34.",
         "2009: Donohue Games is founded; its <i>Kingdom of Kora</i> franchise becomes the "
         "best-selling game series of the decade.",
-        "2012: Donohue Global Holdings takes a 12% strategic stake in Blackwater Security "
+        "2012: The Donohue Company takes a 12% strategic stake in Blackwater Security "
         "International (see Document 05).",
         "2016: <b>Donohue+</b> streaming launches worldwide and reaches 100 million "
         "subscribers in 14 months.",
@@ -172,13 +172,25 @@ story += [
 ]
 
 # ---------------- SHARE DISTRIBUTION ----------------
-DE_TOTAL = 40.0  # billion shares
+TOTAL = 40.0  # billion shares
 B_VOTES = 10
-de_rows = [
+FAMILY = [
     # holder, class B, class A (billions of shares)
-    ("Donohue Global Holdings, Inc.", 9.0, 1.0),
+    ("Victor Donohue (Victor Donohue Revocable Trust)", 2.6, 0.0),
+    ("Joan Donohue (Joan Mercer Donohue Trust)", 1.4, 0.2),
+    ("Natasha Bullock (Natasha Donohue Bullock Trust)", 1.2, 0.0),
+    ("Jasmine Olson (Jasmine Donohue Olson Trust)", 1.2, 0.0),
+    ("Alvin Donohue (Alvin Donohue Trust)", 0.8, 0.0),
+    ("Marc-Anthony Bullock (Dynasty Trust share)", 0.8, 0.0),
+    ("Theodore Donohue Family Trust", 0.0, 0.8),
+    ("Martin Olson (Dynasty Trust share)", 0.0, 0.4),
+    ("Elxa Jackson (Dynasty Trust share)", 0.0, 0.2),
+    ("Grace Bullock (Dynasty Trust share)", 0.0, 0.2),
+    ("Mallory Olson (Dynasty Trust share)", 0.0, 0.2),
+]
+PUBLIC = [
     ("The Donohue Foundation", 0.0, 1.2),
-    ("Directors &amp; officers (excl. DGH)", 0.0, 0.2),
+    ("Directors &amp; officers (non-family)", 0.0, 0.2),
     ("Employee stock plans (ESOP &amp; 401k)", 0.0, 0.8),
     ("Index &amp; passive fund managers", 0.0, 9.6),
     ("Active institutional investors", 0.0, 8.4),
@@ -186,98 +198,83 @@ de_rows = [
     ("Sovereign wealth funds", 0.0, 2.0),
     ("Retail &amp; other public holders", 0.0, 5.4),
 ]
-tot_b = sum(r[1] for r in de_rows)
-tot_a = sum(r[2] for r in de_rows)
-assert abs(tot_b + tot_a - DE_TOTAL) < 1e-9
+ALL = FAMILY + PUBLIC
+tot_b = sum(r[1] for r in ALL)
+tot_a = sum(r[2] for r in ALL)
+assert abs(tot_b + tot_a - TOTAL) < 1e-9
 tot_votes = tot_b * B_VOTES + tot_a
-rows = [["Holder", "Class B (bn)", "Class A (bn)", "Economic %", "Voting %", "Value"]]
-for h, b, a in de_rows:
-    econ = (a + b) / DE_TOTAL
+
+
+def line(h, b, a):
+    econ = (a + b) / TOTAL
     vote = (b * B_VOTES + a) / tot_votes
-    rows.append([h, f"{b:.1f}", f"{a:.1f}", f"{econ:.1%}", f"{vote:.1%}",
-                 f"${econ * 10_000:,.0f}B"])
+    return [h, f"{b:.1f}", f"{a:.1f}", f"{econ:.1%}", f"{vote:.1%}", f"${econ * 10_000:,.0f}B"]
+
+
+fam_b = sum(r[1] for r in FAMILY)
+fam_a = sum(r[2] for r in FAMILY)
+fam_econ = (fam_a + fam_b) / TOTAL
+fam_vote = (fam_b * B_VOTES + fam_a) / tot_votes
+rows = [["Holder", "Class B (bn)", "Class A (bn)", "Economic %", "Voting %", "Value"]]
+rows += [line(*r) for r in FAMILY]
+rows.append(["<b>Donohue family subtotal</b>", f"<b>{fam_b:.1f}</b>", f"<b>{fam_a:.1f}</b>",
+             f"<b>{fam_econ:.1%}</b>", f"<b>{fam_vote:.1%}</b>",
+             f"<b>${fam_econ * 10_000:,.0f}B</b>"])
+rows += [line(*r) for r in PUBLIC]
 rows.append(["<b>TOTAL</b>", f"<b>{tot_b:.1f}</b>", f"<b>{tot_a:.1f}</b>", "<b>100%</b>",
              "<b>100%</b>", "<b>$10,000B</b>"])
+victor_vote = 2.6 * B_VOTES / tot_votes
+bloc_vote = fam_b * B_VOTES / tot_votes
 
 story += [
-    P("Share Distribution: Donohue Enterprises, Inc. (NYSE: DNHU)", h1),
+    P("Share Distribution: The Donohue Company (NYSE: DNHU)", h1),
     P("The Donohue Company uses the same kind of <b>dual-class structure</b> that "
       "controls many real family media empires: the public owns most of the economic "
-      "value, while the family keeps control through super-voting shares held by a "
-      "private holding company."),
+      "value, while the family keeps control through super-voting shares that family "
+      "members hold directly through their personal trusts."),
     *bullets([
         "<b>Class A common</b> (NYSE: DNHU): 1 vote per share, publicly traded.",
-        f"<b>Class B common</b>: {B_VOTES} votes per share, not traded, 100% owned by "
-        "Donohue Global Holdings. Converts to Class A if sold outside the family.",
-        f"Shares outstanding: {DE_TOTAL:.1f} billion at $250.00 = $10.0 trillion market cap.",
+        f"<b>Class B common</b>: {B_VOTES} votes per share, not traded, held only by "
+        "Donohue family members. Converts to Class A if sold outside the family.",
+        f"Shares outstanding: {TOTAL:.1f} billion at $250.00 = $10.0 trillion market cap.",
     ]),
     table(rows, [2.3 * inch, 0.8 * inch, 0.8 * inch, 0.8 * inch, 0.75 * inch,
                  0.85 * inch]),
     Spacer(1, 6),
-    P("RESULT: The family owns 25% of the company's value ($2.5 trillion, the Donohue "
-      "family fortune) and controls 75.2% of the vote.", answer),
-]
-
-# ---------------- DGH ----------------
-dgh = [
-    ("Victor Donohue (Victor Donohue Revocable Trust)", 26, 51),
-    ("Joan Donohue (Joan Mercer Donohue Trust)", 14, 10),
-    ("Natasha Bullock (Natasha Donohue Bullock Trust)", 12, 15),
-    ("Jasmine Olson (Jasmine Donohue Olson Trust)", 12, 12),
-    ("Alvin Donohue (Alvin Donohue Trust)", 8, 5),
-    ("Theodore Donohue Family Trust", 8, 0),
-    ("Marc-Anthony Bullock (Dynasty Trust, sub-trust)", 8, 7),
-    ("Martin Olson (Dynasty Trust, sub-trust)", 4, 0),
-    ("Elxa Jackson (Dynasty Trust, sub-trust)", 2, 0),
-    ("Grace Bullock (Dynasty Trust, sub-trust)", 2, 0),
-    ("Mallory Olson (Dynasty Trust, sub-trust)", 2, 0),
-    ("The Donohue Foundation", 2, 0),
-]
-assert sum(r[1] for r in dgh) == 100 and sum(r[2] for r in dgh) == 100
-drows = [["Owner", "Economic %", "Value", "Voting % (Crown Voting Trust)"]]
-for o, e, v in dgh:
-    drows.append([o, f"{e}%", f"${e * 25:,}B", f"{v}%"])
-drows.append(["<b>TOTAL</b>", "<b>100%</b>", "<b>$2,500B</b>", "<b>100%</b>"])
-
-story += [
-    P("Share Distribution: Donohue Global Holdings, Inc. (private)", h1),
-    P("Donohue Global Holdings (DGH) is the family's private holding company. It owns all "
-      "the Class B shares and 1 billion Class A shares, which is 25% of the economic value "
-      "and 75.2% of the vote. DGH itself is owned by family trusts. Its <b>votes</b> are "
-      "pooled in the <b>Crown Voting Trust</b>, set up by Alexander in 1978 at the IPO, "
-      "so that the family always votes as one bloc."),
-    table(drows, [3.1 * inch, 0.9 * inch, 0.9 * inch, 1.6 * inch]),
-    Spacer(1, 6),
+    P(f"RESULT: The family owns {fam_econ:.0%} of the company's value ($2.5 trillion, the "
+      f"Donohue family fortune) and controls {fam_vote:.1%} of the vote.", answer),
     P("Rules that drive the drama", h2),
     *bullets([
-        "<b>The Chairman's Share.</b> The Chairman of The Donohue Company serves as sole "
-        "trustee of the Crown Voting Trust and personally votes the 51% bloc.",
-        "<b>Section 7 of the Alexander Charter.</b> The sitting Chairman may designate the "
-        "next trustee. If he dies without a designation, trusteeship passes to the "
+        f"<b>The Crown Voting Agreement.</b> Signed by Alexander and his heirs at the 1978 "
+        f"IPO, it binds every Class B holder to vote as one bloc ({bloc_vote:.1%} of the "
+        f"company) as directed by the Chairman. Victor's own shares carry "
+        f"{victor_vote:.1%}, but through the Agreement he steers the whole bloc.",
+        "<b>Section 7 of the Agreement.</b> The sitting Chairman may designate the next "
+        "person to direct the bloc. If he dies without a designation, it passes to the "
         "eldest child. That's Jasmine, and after her, Martin.",
         "<b>The 1976 Stripping.</b> When Victor was made CEO, Alexander converted "
-        "Theodore's branch to economic-only units: 8% of the money and 0% of the vote. "
-        "Theodore has contested it privately for fifty years.",
-        "<b>The Dynasty Trust.</b> The third generation holds economic units only, except "
-        "Marc-Anthony, whom Victor gave 7% of the vote on January 5, 2026, the first "
-        "grandchild with a vote.",
-        "<b>Alvin's children.</b> Under the Charter, any biological child of a Donohue "
-        "trust holder becomes a Dynasty Trust beneficiary. Every paternity claim against "
-        "Alvin is a claim on the fortune.",
+        "Theodore's Class B shares into Class A: the branch kept the money and lost the "
+        "vote. Theodore has contested it privately for fifty years.",
+        "<b>The Dynasty Trust.</b> The third generation holds Class A shares only, except "
+        "Marc-Anthony. On January 5, 2026, Victor gave him Class B shares, making him the "
+        "first grandchild with a vote.",
+        "<b>Alvin's children.</b> Any biological child of a Class B holder becomes a "
+        "Dynasty Trust beneficiary. Every paternity claim against Alvin is a claim on the "
+        "fortune.",
         "<b>Victor's 80th (Saturday, May 30, 2026).</b> Victor planned to announce his "
         "Section 7 designation that night. He collapsed before he could say the name.",
     ]),
     P("Net worth check (as of January 5, 2026)", h2),
     table([
-        ["Person", "DGH stake", "Other holdings", "Approx. net worth"],
+        ["Person", "Donohue Co. shares", "Other holdings", "Approx. net worth"],
         ["Victor Donohue", "$650B", "Real estate, art, Broadway royalties", "~$680B"],
-        ["Joan Donohue", "$350B", "Film royalties, jewels", "~$365B"],
+        ["Joan Donohue", "$400B", "Film royalties, jewels", "~$415B"],
         ["Natasha Bullock", "$300B", "CEO compensation, film &amp; music royalties", "~$330B"],
         ["Jasmine Olson", "$300B", "", "~$305B (with Peter's fortune, far more)"],
         ["Marc-Anthony Bullock", "$200B", "58% of BSI ($754B), personal investments ($40B+)",
          "<b>$994B+, rising daily</b>"],
         ["Martin Olson", "$100B", "", "~$104B"],
-    ], [1.6 * inch, 0.9 * inch, 2.5 * inch, 1.5 * inch]),
+    ], [1.6 * inch, 1.1 * inch, 2.3 * inch, 1.5 * inch]),
 ]
 
 build(OUT, story, "Beyond the Crest — The Donohue Company",

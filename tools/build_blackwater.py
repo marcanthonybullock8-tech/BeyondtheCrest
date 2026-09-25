@@ -227,7 +227,7 @@ story += [
         ["Owner", "Stake", "Value"],
         ["Marc-Anthony Bullock", "58%", "$754B"],
         ["Management &amp; employees", "20%", "$260B"],
-        ["Donohue Global Holdings (strategic stake, 2012)", "12%", "$156B"],
+        ["The Donohue Company (strategic stake, 2012)", "12%", "$156B"],
         ["Institutional private investors", "10%", "$130B"],
         ["<b>TOTAL</b>", "<b>100%</b>", "<b>$1.3T</b>"],
     ], [3.5 * inch, 1.0 * inch, 2.0 * inch]),

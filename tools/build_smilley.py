@@ -44,7 +44,7 @@ story += [
         "granddaughters for fourteen years.",
     ]),
     P("The Allegiance Clause", h2),
-    P("<i>“No Designated Heir of Smilley International shall be joined by marriage, "
+    P("<i>“No Designated Heir of Smilley Corporation shall be joined by marriage, "
       "or bound by blood through their children, to the House of Donohue. Any such heir "
       "is disqualified.”</i> Section 4(c), Smilley Family Charter, adopted "
       + long_date(D(1996, 6, 3)) + ".", italic),
@@ -71,7 +71,7 @@ story += [table([["Line", "Marriage", "Notes"]] + [list(r) for r in TREE],
                 [3.1 * inch, 1.6 * inch, 1.8 * inch]), Spacer(1, 8)]
 
 PROFILES = [
-    ("GS", "Chairman Emeritus of Smilley Corporation and Chairman of Smilley International",
+    ("GS", "Founder &amp; Chairman Emeritus, Smilley Corporation; head of the Smilley Family Council",
      "The Founder. Gus is 82 and still sharp: charming, vindictive, and funny. He has spent "
      "sixty years trying to prove that Alexander Donohue was wrong about his father. He "
      "built a $1.6 trillion company out of a Harlem pharmacy and a grudge. He still keeps "
@@ -178,15 +178,15 @@ story += [
     P("Also Smilleys", h2),
     P("<b>Esther, Emma, and Victoria Smilley</b> are fully profiled in Document 02. "
       "Esther is President &amp; COO of Smilley Corporation and designated heir of Smilley "
-      "International. She oversees Smilley Retail, Smilley Beauty, and every Donohue "
+      "Corporation. She oversees Smilley Retail, Smilley Beauty, and every Donohue "
       "license negotiation."),
     PageBreak(),
     P("History of Smilley Corporation", h1),
     table([
         ["Field", "Detail"],
         ["Legal name", "Smilley Corporation (NYSE: SMLY)"],
-        ["Controlling shareholder", "Smilley International Holdings, Ltd. (private family "
-                                    "holding company)"],
+        ["Control", "The Smilley family, through super-voting Class B shares held directly by "
+                    "family members"],
         ["Industry", "Multinational consumer products, retail &amp; lifestyle "
                      "conglomerate"],
         ["Founded", long_date(D(1974, 9, 9)) + ", Harlem, New York City"],
@@ -260,81 +260,87 @@ story += [
 ]
 
 # ---------------- SHARES ----------------
-SC_TOTAL, B_VOTES, PRICE = 8.0, 5, 200
-sc_rows = [
-    ("Smilley International Holdings, Ltd.", 2.0, 0.56),
-    ("Donohue Enterprises (strategic stake, 1998)", 0.0, 0.32),
-    ("Smilley Family Foundation", 0.0, 0.08),
-    ("Directors &amp; officers (excl. SIH)", 0.0, 0.04),
-    ("Employee stock plans", 0.0, 0.20),
-    ("Index &amp; passive fund managers", 0.0, 1.60),
-    ("Active institutional investors", 0.0, 1.60),
-    ("Public pension &amp; sovereign funds", 0.0, 0.80),
-    ("Retail &amp; other public holders", 0.0, 0.80),
+TOTAL, B_VOTES, PRICE = 8000, 5, 200  # millions of shares
+FAMILY = [
+    # holder, class B, class A (millions of shares)
+    ("Augustus \u201cGus\u201d Smilley", 760, 0),
+    ("Loretta Smilley", 250, 0),
+    ("Leonard Smilley", 500, 60),
+    ("Esther Smilley (Designated Heir)", 250, 0),
+    ("Nathaniel Smilley", 120, 80),
+    ("Camille Smilley-Ward", 120, 80),
+    ("Delphine Smilley", 0, 200),
+    ("Desmond Smilley", 0, 50),
 ]
-tb = sum(r[1] for r in sc_rows)
-ta = sum(r[2] for r in sc_rows)
-assert abs(tb + ta - SC_TOTAL) < 1e-9
+PUBLIC = [
+    ("The Donohue Company (strategic stake, 1998)", 0, 320),
+    ("Smilley Family Foundation", 0, 50),
+    ("Directors &amp; officers (non-family)", 0, 40),
+    ("Employee stock plans", 0, 200),
+    ("Index &amp; passive fund managers", 0, 1600),
+    ("Active institutional investors", 0, 1600),
+    ("Public pension &amp; sovereign funds", 0, 800),
+    ("Retail &amp; other public holders", 0, 920),
+]
+ALL = FAMILY + PUBLIC
+tb = sum(r[1] for r in ALL)
+ta = sum(r[2] for r in ALL)
+assert tb + ta == TOTAL, tb + ta
 tv = tb * B_VOTES + ta
-rows = [["Holder", "Class B (bn)", "Class A (bn)", "Economic %", "Voting %", "Value"]]
-for h, b, a in sc_rows:
-    e = (a + b) / SC_TOTAL
-    v = (b * B_VOTES + a) / tv
-    rows.append([h, f"{b:.2f}", f"{a:.2f}", f"{e:.1%}", f"{v:.1%}",
-                 f"${e * 1600:,.0f}B"])
-rows.append(["<b>TOTAL</b>", f"<b>{tb:.2f}</b>", f"<b>{ta:.2f}</b>", "<b>100%</b>",
-             "<b>100%</b>", "<b>$1,600B</b>"])
 
-sih = [
-    ("Augustus “Gus” Smilley", 30, 40),
-    ("Loretta Smilley", 10, 10),
-    ("Leonard Smilley", 22, 25),
-    ("Esther Smilley (Designated Heir)", 10, 15),
-    ("Nathaniel Smilley", 8, 5),
-    ("Camille Smilley-Ward", 8, 5),
-    ("Delphine Smilley", 8, 0),
-    ("Desmond Smilley", 2, 0),
-    ("Smilley Family Foundation", 2, 0),
-]
-assert sum(r[1] for r in sih) == 100 and sum(r[2] for r in sih) == 100
-sih_value = 0.32 * 1600
-srows = [["Owner", "Economic %", "Value", "Family Council vote"]]
-for o, e, v in sih:
-    srows.append([o, f"{e}%", f"${e / 100 * sih_value:,.1f}B", f"{v}%"])
-srows.append(["<b>TOTAL</b>", "<b>100%</b>", f"<b>${sih_value:,.0f}B</b>", "<b>100%</b>"])
+
+def line(h, b, a):
+    e = (a + b) / TOTAL
+    v = (b * B_VOTES + a) / tv
+    return [h, f"{b:,}", f"{a:,}", f"{e:.1%}", f"{v:.1%}", f"${(a + b) * PRICE / 1000:,.0f}B"]
+
+
+fb = sum(r[1] for r in FAMILY)
+fa = sum(r[2] for r in FAMILY)
+fam_e = (fb + fa) / TOTAL
+fam_v = (fb * B_VOTES + fa) / tv
+rows = [["Holder", "Class B (M)", "Class A (M)", "Economic %", "Voting %", "Value"]]
+rows += [line(*r) for r in FAMILY]
+rows.append(["<b>Smilley family subtotal</b>", f"<b>{fb:,}</b>", f"<b>{fa:,}</b>",
+             f"<b>{fam_e:.1%}</b>", f"<b>{fam_v:.1%}</b>",
+             f"<b>${(fb + fa) * PRICE / 1000:,.0f}B</b>"])
+rows += [line(*r) for r in PUBLIC]
+rows.append(["<b>TOTAL</b>", f"<b>{tb:,}</b>", f"<b>{ta:,}</b>", "<b>100%</b>",
+             "<b>100%</b>", "<b>$1,600B</b>"])
+gus_b = 760 / fb
 
 story += [
     P("Share Distribution: Smilley Corporation (NYSE: SMLY)", h1),
     *bullets([
         "<b>Class A common</b>: 1 vote per share, publicly traded.",
-        f"<b>Class B common</b>: {B_VOTES} votes per share, not traded, 100% owned by Smilley "
-        "International Holdings.",
-        f"Shares outstanding: {SC_TOTAL:.1f} billion at ${PRICE} = $1.6 trillion.",
+        f"<b>Class B common</b>: {B_VOTES} votes per share, not traded, held only by "
+        "Smilley family members.",
+        f"Shares outstanding: {TOTAL / 1000:.1f} billion at ${PRICE} = $1.6 trillion.",
     ]),
     table(rows, [2.3 * inch, 0.8 * inch, 0.8 * inch, 0.8 * inch, 0.75 * inch, 0.85 * inch]),
     Spacer(1, 6),
-    P("RESULT: The Smilley family owns 32% of the company ($512 billion) and controls "
-      f"{(2.0 * B_VOTES + 0.56) / tv:.1%} of the vote. Donohue Enterprises holds 4.0% "
-      "of the economics and 2.0% of the votes, which makes it the largest shareholder "
-      "outside the family.", answer),
-    P("Share Distribution: Smilley International Holdings, Ltd. (private)", h1),
-    P("Smilley International Holdings (SIH) is the family holding company, governed by "
-      "the <b>Smilley Family Council</b> under the 1996 Family Charter, including the "
-      "Allegiance Clause."),
-    table(srows, [2.8 * inch, 1.0 * inch, 1.2 * inch, 1.5 * inch]),
-    Spacer(1, 6),
+    P(f"RESULT: The Smilley family owns {fam_e:.1%} of the company "
+      f"(${(fb + fa) * PRICE / 1000:,.0f} billion) and controls {fam_v:.1%} of the vote. "
+      "The Donohue Company holds 4.0% of the economics and 2.0% of the votes, which makes "
+      "it the largest shareholder outside the family.", answer),
+    P("The Smilley Family Council", h2),
+    P("The Class B holders (Gus, Loretta, Leonard, Esther, Nathaniel, and Camille) sit on "
+      "the <b>Smilley Family Council</b> under the 1996 Family Charter. The Council votes "
+      f"by Class B shares. Gus alone holds {gus_b:.0%}; with Loretta or Leonard beside him, "
+      "he has a majority."),
     P("Rules that drive the drama", h2),
     *bullets([
-        "<b>The Designated Heir</b> inherits Gus's 30% and his 40% Council vote when he "
-        "dies. That would make Esther the most powerful Smilley alive.",
+        "<b>The Designated Heir</b> inherits Gus's Class B shares when he dies. With her "
+        "own, that would give Esther over half of the family's votes and make her the most "
+        "powerful Smilley alive.",
         "<b>Section 4(c), the Allegiance Clause:</b> disqualifies any heir tied to the "
         "House of Donohue by marriage or through their children. The Council can invoke it "
-        "by majority vote. Gus plus any one other member is enough.",
+        "by a majority of Class B shares.",
         "<b>Succession if disqualified:</b> the title passes to the eldest eligible "
         "grandchild. That's Nathaniel.",
         "<b>Season 1:</b> Nathaniel presents the RootsKit evidence at the Family Council "
-        "(Ep #0163). Gus invokes Section 4(c) (Ep #0164). Esther is suspended unless a DNA "
-        "test clears her by Labor Day (Ep #0165).",
+        "(Ep #0163). Gus invokes Section 4(c) with Leonard's votes (Ep #0164). Esther is "
+        "suspended unless a DNA test clears her by Labor Day (Ep #0165).",
     ]),
 ]
 
