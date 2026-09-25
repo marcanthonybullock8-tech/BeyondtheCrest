@@ -60,7 +60,8 @@ story += [
          "Victor comes home \u2022 Joan's confession \u2022 <b>The Fourth of July kiss "
          "(#0126)</b> \u2022 Deuce's trial begins \u2022 Alvin steals the security plan "
          "\u2022 <b>World Cup semifinal (#0133)</b> \u2022 T-Bone's girlfriend testifies "
-         "\u2022 Marc and Esther's night together (#0138)"],
+         "\u2022 <b>#MarcForPresident trends (#0126)</b> \u2022 Marc and Esther's night "
+         "together (#0138)"],
     ], [0.8 * inch, 1.5 * inch, 1.0 * inch, 3.2 * inch]),
     P("The Oscars (#0051), the Tonys (#0107), and Victor's 80th (#0101) stay on their real "
       "dates just outside sweeps. They are ratings events on their own.", italic),
@@ -255,6 +256,29 @@ ARCS = [
      "The season-long off-screen villain turns out to be family, and joins the cast "
      "the moment the audience learns who he is.",
      "Season 2 belongs to him."),
+    ("16. The Secret Candidate",
+     "The richest man on Earth, a Democrat with Republican values, secretly prepares "
+     "to run for President in 2028. His best friend is running too.",
+     "Marc, Esther, Arianna, Victor, Zeke Hart, Nova, Martin, Brielle",
+     ["At 11:59 PM on his birthday, Marc writes one word in a new leather notebook: "
+      "2028 (#0001).",
+      "He asks Victor, \u201chypothetically,\u201d if a Donohue could be President "
+      "(#0009). Nova's secret national poll puts an unnamed \u201c34-year-old Atlanta "
+      "businessman\u201d within six points of the Vice President (#0036).",
+      "Zeke warns that a campaign and Blackwater can't both survive (#0046).",
+      "After the EGOT: \u201cWhat's next?\u201d \u201cThe White House.\u201d The room "
+      "laughs, except Martin (#0108).",
+      "His bipartisan toast for America's 250th goes viral, and #MarcForPresident trends "
+      "No. 1 on Chirp (#0126). Arianna: \u201cTell me you're not serious\u201d (#0127). "
+      "She launches her exploratory committee early (#0129).",
+      "Martin reads the polls: \u201cIf he runs, he wins\u201d (#0136).",
+      "Marc shows Esther the notebook. She's the first person he's ever told, and "
+      "she's a Republican (#0150)."],
+     "A soap hero whose secret isn't only a crime or a child but a White House run, "
+     "built with the same patience as a murder mystery and aimed straight at his best "
+     "friend's campaign.",
+     "Esther and Nova know. Martin suspects. Arianna fears it. The platform is locked "
+     "in the notebook, and 2028 is coming."),
 ]
 for title, logline, players, beats, fresh, status in ARCS:
     story.append(KeepTogether([P(title, h2), P(f"<i>{logline}</i>"),

@@ -460,8 +460,23 @@ story += [
     P("13. Marc-Anthony's Secret Campaign", h1),
     P("Marc-Anthony Bullock is a Democrat with Republican values who believes in "
       "bipartisanship. He SECRETLY wants to run for President of the United States in "
-      "2028. No one knows: not Amond, not Grace, not his parents, and not Arianna.",
-      answer),
+      "2028. At the premiere, no one knows: not Amond, not Grace, not his parents, and "
+      "not Arianna.", answer),
+    P("How the secret moves in Season 1 (Document 08, Storyline 16)", h2),
+    table([
+        ["Episode", "What happens"],
+        ["#0001", "11:59 PM on his birthday: he writes \u201c2028\u201d in a leather "
+                  "notebook"],
+        ["#0036", "Nova runs a secret national poll. He's within six points of the Vice "
+                  "President without anyone knowing his name"],
+        ["#0046", "Zeke: a campaign and Blackwater can't both survive"],
+        ["#0108", "\u201cWhat's next after the EGOT?\u201d \u201cThe White House.\u201d "
+                  "Everyone laughs but Martin"],
+        ["#0126", "His America-at-250 toast goes viral; #MarcForPresident trends No. 1"],
+        ["#0129", "Arianna launches her exploratory committee early"],
+        ["#0136", "Martin: \u201cIf he runs, he wins.\u201d"],
+        ["#0150", "He tells Esther, the first person he's ever told"],
+    ], [0.9 * inch, 5.6 * inch]),
     table([
         ["Eligibility check", ""],
         ["Constitutional minimum age", "35"],
@@ -482,7 +497,7 @@ story += [
                                          "planned after the midterms (launched early, "
                                          "Ep #0129)"],
         ["Marc-Anthony Bullock", "Democrat (with Republican values)",
-         "SECRET. Hasn't told a soul"],
+         "SECRET. By the finale only Esther and Nova know; Martin suspects"],
     ], [1.6 * inch, 1.9 * inch, 3.0 * inch]),
     P("The collision course", h2),
     *bullets([

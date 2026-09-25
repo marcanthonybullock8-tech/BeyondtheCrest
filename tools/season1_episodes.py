@@ -34,7 +34,9 @@ EPISODES = [
      "Covenant and names Marc President &amp; COO of The Donohue Company, effective "
      "immediately. Martin's champagne glass shatters in his hand. Across the ridge, Esther "
      "watches the livestream in the dark. Final beat: Harmony, alone at her laptop, hits "
-     "“publish” as <i>The Tea Kettle ATL</i>.",
+     "“publish” as <i>The Tea Kettle ATL</i>. And at 11:59 PM, alone in his "
+     "study, Marc opens a new leather notebook and writes one word on the first page: "
+     "<b>2028</b>.",
      "MA VD JD NB RB JO PO EL JJ GR MO ML AM AR ES HD LY RD WO TB"),
     (False, None,
      "The victim is Terrence “T-Bone” Gaines. His burner holds one contact: "
@@ -81,7 +83,9 @@ EPISODES = [
     (False, None,
      "Victor gives Marc the key to Alexander's 1939 printing press. Joan warns him: "
      "“Your cousin wants to feel the crown's weight on your neck.” Natasha and "
-     "Jasmine's war goes public at the Foundation board.",
+     "Jasmine's war goes public at the Foundation board. Marc asks his grandfather, "
+     "“hypothetically,” whether a Donohue could ever be President. Victor: "
+     "“Son, a Donohue already picks them.”",
      "VD JD MA NB JO PR WO RB PO ML"),
     (False, None,
      "Leonard orders Esther to meet Marc face to face or lose the lead. Friday hook: Marc "
@@ -211,8 +215,11 @@ EPISODES = [
     # ---------- WEEK 8 ----------
     (False, None,
      "Jeremy subpoenas BSI's records. Gen. Whitmore stonewalls, and Elxa quietly stalls "
-     "the subpoena “pending review.”",
-     "JJ CW EL RD EH MA"),
+     "the subpoena “pending review.” Meanwhile Marc has Nova run a private "
+     "national poll through a BSI shell, no names, no questions asked. An unnamed "
+     "“34-year-old Atlanta businessman” is already within six points of the "
+     "Vice President.",
+     "JJ CW EL RD EH MA NS"),
     (False, None,
      "The RootsKit samples reach the lab. Nathaniel gets automatic alerts on every "
      "family-linked account, the twins' included.",
@@ -254,8 +261,10 @@ EPISODES = [
     # ---------- WEEK 10 ----------
     (False, None,
      "Arianna begs Julian to end it, and he refuses. Marc to Arianna: “Tell the "
-     "truth before someone else does.”",
-     "AR JU MA HC EC"),
+     "truth before someone else does.” Later, Marc asks Zeke Hart what a "
+     "presidential campaign would do to Blackwater. Zeke: “One of them doesn't "
+     "survive the other, son.”",
+     "AR JU MA HC EC EH"),
     (False, None,
      "Natasha's Oscar campaign peaks. Jasmine publicly skips her sister's pre-Oscar "
      "party.",
@@ -518,8 +527,10 @@ EPISODES = [
      "MA GR NB RB VD JD LY EM VI ES NV SC IV AM"),
     (False, None,
      "EGOT headlines everywhere. Marc dedicates his Tony “to the family I'm going to "
-     "have.” The twins look at each other.",
-     "MA EM VI LY BK GR"),
+     "have.” The twins look at each other. A reporter asks what's left after "
+     "the EGOT. Marc grins: “The White House.” The room laughs. Martin, "
+     "watching at home, doesn't.",
+     "MA EM VI LY BK GR MO"),
     (False, None,
      "Jeremy's task force raids a BSI warehouse and finds it empty. Blackwater knew. "
      "Jeremy suspects the leak is his wife.",
@@ -590,18 +601,22 @@ EPISODES = [
     # ---------- WEEK 27 ----------
     (True, "Sat, Jul 4",
      "Fourth of July fireworks over Belmont Crest's 18th fairway. Marc and Esther kiss, "
-     "and Emma and Victoria see it.",
+     "and Emma and Victoria see it. Earlier, Marc's toast for America's 250th "
+     "birthday, a call to end the war between the parties, goes viral. By midnight "
+     "<b>#MarcForPresident</b> is trending No. 1 on Chirp.",
      "MA ES EM VI LY JD VD NB RB GR AM HD AR LG MF"),
     (False, None,
      "The twins debate telling Marc and Lyric says wait. Esther confesses the kiss to "
-     "Harmony, who almost confesses what she knows.",
-     "EM VI LY ES HD"),
+     "Harmony, who almost confesses what she knows. Arianna shows Marc the hashtag: "
+     "“Tell me you're not serious.” Marc: “About what?”",
+     "EM VI LY ES HD AR MA"),
     (False, None,
      "Deuce's trial begins. Jeremy testifies and Robert eviscerates him.",
      "RB JJ DX JK RD EL"),
     (False, None,
-     "Julian tells Journee he loves her. Arianna launches her exploratory committee early "
-     "to get ahead of the story.",
+     "Julian tells Journee he loves her. Arianna launches her 2028 exploratory "
+     "committee early, to get ahead of Journee's story and ahead of "
+     "#MarcForPresident.",
      "JU JH AR MA"),
     (False, None,
      "Alvin steals the stadium security plan from Marc's office. Friday hook: Nova sees him "
@@ -630,7 +645,8 @@ EPISODES = [
      "RB DX JJ JK EL"),
     # ---------- WEEK 29 ----------
     (False, None,
-     "Martin panics as the trial edges toward him.",
+     "Martin panics as the trial edges toward him, then has Brielle pull Marc's poll "
+     "numbers since the Fourth. “He's going to run. And if he runs, he wins.”",
      "MO BK PO"),
     (False, None,
      "Peter tells Jasmine about Martin's knuckles. Jasmine: “You will never say that "
@@ -682,7 +698,9 @@ EPISODES = [
      "punches Trey.",
      "EM VI LY TR JC AB ES MA NA"),
     (False, None,
-     "<i>Crowns</i> wraps. Friday hook: Marc tells Esther he wants a family, with her.",
+     "<i>Crowns</i> wraps. Friday hook: Marc tells Esther he wants a family, with her. "
+     "Then he shows her the leather notebook. She's the first person he's ever told "
+     "about 2028, and she's a Republican.",
      "MA ES EM VI LY GR"),
     # ---------- WEEK 32 ----------
     (False, None,
