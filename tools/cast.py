@@ -28,7 +28,7 @@ CAST = {
            "U.S. Representative for Georgia"),
     "AL": ("Alvin Donohue", D(1980, 10, 8), None, CORE, "Donohue",
            "Party boy, fixer, underworld-connected (joins at Ep #0085)"),
-    "RB": ("Robert Bullock", D(1959, 2, 10), None, CORE, "Bullock",
+    "RB": ("Robert Bullock", D(1969, 2, 10), None, CORE, "Bullock",
            "Founder, Bullock & Associates, LLP"),
     "PO": ("Dr. Peter Olson", D(1969, 11, 13), None, CORE, "Olson",
            "Chief of Plastic Surgery"),

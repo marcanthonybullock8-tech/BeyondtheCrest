@@ -168,7 +168,7 @@ EPISODES = [
      "At Deuce's bond hearing, Judge Okoye denies bail.",
      "RB GB MF DX JK JJ EL AM MA"),
     (False, None,
-     "Double birthday: Robert turns 67 and Amond turns 34. Marc gives Amond a Rolls-Royce. "
+     "Double birthday: Robert turns 57 and Amond turns 34. Marc gives Amond a Rolls-Royce. "
      "Martin sends Amond a Donohue Records key card.",
      "RB AM MA NB GR EL HD MO YB GB JJ"),
     (False, None,

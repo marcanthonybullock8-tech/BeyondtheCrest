@@ -234,7 +234,7 @@ CHARACTERS = [
     # ------------------------------ BULLOCK ------------------------------
     dict(
         family="THE BULLOCK FAMILY",
-        name="ROBERT BULLOCK", born=D(1959, 2, 10), looks="late 40s",
+        name="ROBERT BULLOCK", born=D(1969, 2, 10), looks="early 40s",
         title="Founder &amp; Managing Partner, Bullock &amp; Associates, LLP (1995–present) "
               "• Criminal defense &amp; entertainment attorney",
         ties="Husband of Natasha (m. Sat, June 22, 1991) • Father of Elxa, Marc-Anthony "
@@ -245,9 +245,10 @@ CHARACTERS = [
             "stared down Victor Donohue and kept his job.",
         back=[
             "Raised in southwest Atlanta by a single mother who cleaned offices on Peachtree. "
-            "Clark College, then Howard Law, on scholarship and spite.",
-            "Met Natasha when she was 18 and he was 30. Their relationship scandalized the "
-            "Donohues. Elxa was born in August 1990, and he married Natasha in June 1991 "
+            "Clark Atlanta University, then Howard Law, on scholarship and spite.",
+            "Met Natasha when she was 18 and he was 20, a broke Clark Atlanta sophomore with "
+            "a mouth on him. The Donohues were scandalized that their princess chose a "
+            "nobody from the Westside. Elxa was born in August 1990, and he married Natasha in June 1991 "
             "while she was pregnant with Marc-Anthony. Victor still calls it “the "
             "hostile takeover.”",
             "Opened Bullock &amp; Associates on Wednesday, March 1, 1995. Today it is the "
@@ -700,10 +701,10 @@ timeline = [
                           "The Donohue Company."),
     ("Mon, Jul 31, 1944", "Theodore Donohue born."),
     ("Thu, May 30, 1946", "Victor Donohue born."),
+    ("Sat, Apr 17, 1948", "Joan Mercer born, Macon, GA."),
     ("Sat, May 17, 1958", "Alexander &amp; Simone found Belmont Crest."),
     ("Sat, Jun 17, 1961", "Belmont Crest Country Club opens."),
-    ("Sat, Apr 17, 1948", "Joan Mercer born, Macon, GA."),
-    ("Tue, Feb 10, 1959", "Robert Bullock born."),
+    ("Mon, Feb 10, 1969", "Robert Bullock born."),
     ("Sat, Jun 14, 1969", "Victor marries Joan Mercer."),
     ("Thu, Nov 13, 1969", "Peter Olson born."),
     ("Mon, Mar 23, 1970", "Jasmine Donohue born."),
