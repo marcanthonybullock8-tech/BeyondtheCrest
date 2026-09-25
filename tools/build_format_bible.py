@@ -104,7 +104,7 @@ story += [Spacer(1, 2.1 * inch),
           Spacer(1, 90),
           P("<b>Series Premiere (in-universe):</b> Monday, January 5, 2026",
             ParagraphStyle("c1", parent=body, alignment=TA_CENTER)),
-          P("<b>Setting:</b> A private gated community in affluent metro Atlanta, Georgia",
+          P("<b>Setting:</b> Belmont Crest, a private gated community in affluent metro Atlanta, Georgia",
             ParagraphStyle("c2", parent=body, alignment=TA_CENTER)),
           P("<b>First Family:</b> The Donohues — Victor, Joan, Jasmine, Natasha &amp; Alvin",
             ParagraphStyle("c3", parent=body, alignment=TA_CENTER)),
@@ -137,7 +137,7 @@ story += [P("0. Locked Canon (Story Rules)", h1),
               "consistent unless the story earns a change on screen.",
           ]),
           P("Premise", h2),
-          P("Set in a fictional gated community in the affluent Atlanta area, "
+          P("Set in <b>Belmont Crest</b>, a fictional gated community in the affluent Atlanta area, "
             "<i>Beyond the Crest</i> tells the story of a wealthy Black family in a posh, "
             "gated enclave. At the center is the <b>Donohue Family</b> — <b>Victor, Joan, "
             "Jasmine, Natasha, and Alvin</b> — a powerful and prestigious "
