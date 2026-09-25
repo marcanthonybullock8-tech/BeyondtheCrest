@@ -168,6 +168,12 @@ CAST = {
     # ---------------- DAY PLAYERS ----------------
     "TB": ("Terrence “T-Bone” Gaines", D(1984, 3, 2),
            D(2026, 1, 4), DAY, "Blackwater", "Murdered Blackwater traitor"),
+    "BH": ("Beverly \u201cBev\u201d Holland", D(1965, 7, 12), None, RECURRING, "Politics",
+           "Jasmine's chief of staff since 1997"),
+    "FL": ("Dr. Frances Lowe", D(1963, 5, 21), None, DAY, "Law",
+           "Fulton County Medical Examiner"),
+    "DM": ("Officer Devon Marsh", D(1999, 10, 4), None, DAY, "APD",
+           "APD digital forensics technician"),
     "OS": ("Otis Smilley (1958)", D(1919, 11, 3), D(1988, 2, 9), DAY,
            "Smilley", "Gus's father; Beacon press foreman"),
     "HW": ("Harlan Whitfield (1958)", D(1911, 4, 22), D(1979, 6, 30), DAY,
@@ -235,6 +241,7 @@ PARTY = {
     "ZR": DEM, "CL": "Not a U.S. citizen (French)", "VM": REP,
     # Theodore branch
     "TD": REP, "LC": REP, "XD": REP, "CP": IND, "T3": IND, "SD": IND,
+    "FL": IND, "DM": DEM, "BH": DEM,
     # Historical (flashback)
     "OS": REP + " (the party of Lincoln, until 1964)", "HW": DEM,
 }

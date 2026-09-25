@@ -44,7 +44,7 @@ EPISODES = [
      "Westbrook, the twins spot the open casting call for Marc's movie musical "
      "<i>Crowns</i>. Emma: “Mom will never allow it.” Victoria: “Mom won't "
      "know.”",
-     "JJ EL RD JO VD JD EM VI LY ES MO NB PO TR"),
+     "JJ EL RD JO VD JD EM VI LY ES MO NB PO TR KM JH FL DM TB BH"),
     (False, None,
      "Smilley Plaza: Leonard reveals that the Crown License, the Donohue deal behind 41% "
      "of Smilley revenue, expires August 31. Donohue won't auto-renew, and Marc will run "

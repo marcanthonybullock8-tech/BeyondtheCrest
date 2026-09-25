@@ -28,7 +28,14 @@ from btc_pdf import age_on, long_date
 from cast import CAST
 from season1_episodes import EPISODES, full_cast, season1_calendar
 
-TITLES = {1: "The Crown on the Hill"}
+EXTRAS = {
+    1: "rower, patrol officers, dive team, photographers, DBC camera crew, waiters, "
+       "valets, 500 gala guests, string quartet, jazz band",
+    2: "chef, housekeeper, florists, Westbrook students, Trey's friends, APD officers, "
+       "reporters and camera crews, BNN anchor (on TV), board member and assistants "
+       "(V.O.)",
+}
+TITLES = {1: "The Crown on the Hill", 2: "A Dead Man Calling"}
 
 F, FB = "Courier", "Courier-Bold"
 base = dict(fontName=F, fontSize=12, leading=14)
@@ -137,9 +144,7 @@ def main(ep):
     story += [Paragraph("CAST", act),
               Paragraph(f"Ages as of {long_date(air)}", center), Spacer(1, 12), t,
               Spacer(1, 12),
-              Paragraph("Also: rower, patrol officers, dive team, photographers, "
-                        "DBC camera crew, waiters, valets, 500 gala guests, "
-                        "string quartet, jazz band.", small),
+              Paragraph("Also: " + EXTRAS.get(ep, "background performers") + ".", small),
               PageBreak()]
 
     # Sets

@@ -110,6 +110,15 @@ SECTIONS = [
          ["Opens a joint task force with Jeremy (Ep #0067). Raids the empty BSI warehouse "
           "(Ep #0109)."],
          ("NADIA", ("", "Nobody's this clean, Detective. Nobody."))),
+        ("FL", "The Medical Examiner. Dr. Lowe has run the Fulton County morgue for twenty "
+         "years. She's dry, precise, and unshockable.",
+         ["Identifies T-Bone Gaines and finds the burner sewn into his coat (Ep #0002)."],
+         ("DR. LOWE", ("", "I only do the parts that don't talk back."))),
+        ("DM", "The Tech. Devon runs APD digital forensics on energy drinks and conspiracy "
+         "podcasts.",
+         ["Recovers the ARCHITECT call log and explains how a single ring can give away a "
+          "neighborhood (Ep #0002)."],
+         ("DEVON", ("", "Wiped is gone. Deleted is hiding."))),
         ("JK", "The Judge. Judge Okoye presides over the Whitaker trial. She's "
          "incorruptible, which makes her a problem for everyone.",
          ["Nigerian-American, Emory Law. On the bench since 2008.",
@@ -134,6 +143,13 @@ SECTIONS = [
          "ambitious, and Martin's girlfriend and hired gun.",
          ["Digs into the twins' birth records for Martin (Ep #0092)."],
          ("BRIELLE", ("", "I don't report the news, baby. I schedule it."))),
+        ("BH", "The Right Hand. Bev has been Jasmine's chief of staff since the day she was "
+         "sworn in. She's blunt, tireless, and the only person who can tell the "
+         "Congresswoman she's wrong.",
+         ["Knows every pastor, union boss, and barbershop owner in the district by first "
+          "name.", "First to smell Marcus Pryor coming (Ep #0002)."],
+         ("BEV", ("", "This is the first morning in twenty-nine years you've looked like "
+                      "you could lose."))),
         ("CH", "The Other Challenger. Cordell Haynes is a former Fulton County prosecutor "
          "turned state representative. He's polished, righteous, and convinced Arianna "
          "cut corners as DA. He's right, and he can't prove it.",
