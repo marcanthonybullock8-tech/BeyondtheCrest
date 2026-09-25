@@ -4,6 +4,7 @@ import datetime as dt
 from reportlab.lib.units import inch
 from reportlab.platypus import PageBreak, Spacer
 
+from cast import CAST, PARTY, MARC_PLATFORM, MARC_LONG_TERM
 from btc_pdf import (P, h1, h2, italic, answer, bullets, table, age_on, long_date, build,
                      cover)
 
@@ -36,8 +37,8 @@ story += [
         "Donohues were in the room for many of them.",
         "<b>Real calendar.</b> Holidays, election days, and award shows land on their "
         "real 2026 dates.",
-        "<b>Party names are never spoken.</b> America still has two major parties, but "
-        "the show never names them on screen. Jasmine's affiliation stays open.",
+        "<b>Real parties.</b> Democrats and Republicans are named on screen. Every "
+        "character's party is listed in Section 12.",
         "<b>In-universe media only.</b> Every article, broadcast, and post comes from "
         "outlets and platforms that exist inside this world (Section 6).",
     ]),
@@ -88,13 +89,13 @@ story += [
     P("Washington (all fictional)", h2),
     table([
         ["Office", "Holder", "Born / Age", "Notes"],
-        ["President", "Richard Aldridge", f"Mar 18, 1958 / {age_on(D(1958, 3, 18))}",
+        ["President (R)", "Richard Aldridge", f"Mar 18, 1958 / {age_on(D(1958, 3, 18))}",
          "Former governor of Ohio. Inaugurated Jan 20, 2025. Courts Donohue money and "
          "fears Donohue cameras"],
-        ["Vice President", "Karen Molina", f"Sep 2, 1969 / {age_on(D(1969, 9, 2))}",
+        ["Vice President (R)", "Karen Molina", f"Sep 2, 1969 / {age_on(D(1969, 9, 2))}",
          "Former U.S. senator from Arizona. Already the front-runner for 2028, and "
          "watching Arianna closely"],
-        ["U.S. Representative, Georgia", "Jasmine Olson", "Mar 23, 1970 / 55",
+        ["U.S. Representative, Georgia (D)", "Jasmine Olson", "Mar 23, 1970 / 55",
          "In office since 1997. Senior member of the House Energy and Commerce Committee, "
          "which oversees the media industry her family dominates. Critics never stop "
          "pointing that out"],
@@ -138,13 +139,13 @@ story += [
     P("4. Georgia", h1),
     table([
         ["Office", "Holder", "Notes"],
-        ["Governor", "William Hartley (b. Jun 6, 1962; 63)",
+        ["Governor (D)", "William Hartley (b. Jun 6, 1962; 63)",
          "Serving his second and final term, so 2026 is an open-seat governor's race. "
          "Appointed Arianna Cummings Attorney General"],
-        ["Attorney General", "Arianna Cummings (b. Oct 25, 1992; 33)",
+        ["Attorney General (D)", "Arianna Cummings (b. Oct 25, 1992; 33)",
          "Appointed Mon, Mar 17, 2025, after Attorney General Bradley Keane resigned in a "
          "bribery scandal. Faces her first statewide election in November 2026"],
-        ["Fulton County District Attorney", "Colette Barnes (b. Apr 30, 1979; 46)",
+        ["Fulton County District Attorney (D)", "Colette Barnes (b. Apr 30, 1979; 46)",
          "Arianna's former chief deputy, appointed interim DA in 2025. Loyal to Arianna, "
          "for now"],
     ], [1.6 * inch, 2.0 * inch, 2.9 * inch]),
@@ -169,7 +170,7 @@ story += [
       "Hollywood sign in ours."),
     table([
         ["City Office", "Holder", "Notes"],
-        ["Mayor", "Denise Whitlock (b. Dec 15, 1972; 53)",
+        ["Mayor (D)", "Denise Whitlock (b. Dec 15, 1972; 53)",
          "Second term. A Belmont Crest outsider who resents the ridge and needs its "
          "money"],
         ["Chief of Police, APD", "Elxa Jackson (b. Aug 29, 1990; 35)",
@@ -410,6 +411,84 @@ story += [
         "<b>#DonohueTenTrillion</b> (640K posts)",
         "<b>#RidgeVsThePark</b> (88K posts): “Smilleys not invited to the gala "
         "AGAIN. Tuxedo Park in shambles.”",
+    ]),
+]
+
+# ---------------- 12. POLITICS ----------------
+GROUPS = [
+    ("The Donohue Family", ["VD", "JD", "AL", "TD", "LC", "XD", "CP", "T3", "SD"]),
+    ("The Bullocks", ["RB", "NB", "EL", "MA", "GR"]),
+    ("The Olsons", ["JO", "PO", "MO", "ML"]),
+    ("The Circle", ["AM", "AR", "HD", "JJ", "JU", "EC", "HC", "GB", "YB", "CD", "LD"]),
+    ("The Smilley Family", ["GS", "LO", "LE", "CE", "DE", "NA", "MQ", "CA", "DO", "ES",
+                            "DS"]),
+    ("Blackwater &amp; BSI", ["EH", "KM", "NS", "DX", "CB", "QM", "IV", "CO", "LF", "CW"]),
+    ("Law, Politics &amp; Media", ["WJ", "RD", "FB", "JK", "MP", "JH", "BK"]),
+    ("Everyone Else", ["LG", "WO", "MF", "PW", "PR", "AB", "EV", "SC", "NV", "ZR", "CL",
+                       "VM", "RT"]),
+]
+rows = [["Character", "Party"]]
+for title, codes in GROUPS:
+    rows.append([f"<b>{title}</b>", ""])
+    rows += [[CAST[c][0], PARTY[c]] for c in codes]
+story += [
+    PageBreak(),
+    P("12. Politics: Everyone's Party", h1),
+    P("Registration as of Monday, January 5, 2026. The families are split down the middle, "
+      "and so is Thanksgiving dinner. The kids (Emma, Victoria, Lyric, Trey, Jaden, and "
+      "August) are too young to vote.", italic),
+    table(rows, [3.3 * inch, 3.2 * inch]),
+    Spacer(1, 6),
+    P("Where the splits hurt", h2),
+    *bullets([
+        "<b>Summit House:</b> Victor is a lifelong business Republican; Joan is a lifelong "
+        "Democrat. They've canceled out each other's vote in every election since 1969.",
+        "<b>The Olsons:</b> Congresswoman Jasmine is a Democrat. Her husband Peter and "
+        "her son Martin are Republicans who quietly write checks to her opponents' party.",
+        "<b>The Jacksons:</b> the Chief is an Independent; her by-the-book husband is a "
+        "Republican.",
+        "<b>The Circle:</b> Amond (Republican) and Harmony (Democrat) fight about "
+        "politics the way they fight about everything else.",
+        "<b>The Smilleys</b> are a Republican house, except Loretta, Delphine, and "
+        "Desmond. Leonard still funds Democrat Marcus Pryor's primary challenge to Jasmine, "
+        "because hurting a Donohue beats party loyalty.",
+    ]),
+
+    P("13. Marc-Anthony's Secret Campaign", h1),
+    P("Marc-Anthony Bullock is a Democrat with Republican values who believes in "
+      "bipartisanship. He SECRETLY wants to run for President of the United States in "
+      "2028. No one knows: not Amond, not Grace, not his parents, and not Arianna.",
+      answer),
+    table([
+        ["Eligibility check", ""],
+        ["Constitutional minimum age", "35"],
+        ["Marc's age on Election Day, Tue, Nov 7, 2028",
+         str(age_on(D(1992, 1, 5), D(2028, 11, 7)))],
+        ["Marc's age on Inauguration Day, Sat, Jan 20, 2029",
+         str(age_on(D(1992, 1, 5), D(2029, 1, 20))) + " (eligible)"],
+    ], [4.0 * inch, 2.5 * inch]),
+    P("What he believes in, and will 100% accomplish, zero questions asked", h2),
+    *bullets(MARC_PLATFORM),
+    P(f"<b>Long-term goal:</b> {MARC_LONG_TERM}"),
+    P("More of his platform will be revealed as the story unfolds.", italic),
+    P("The 2028 field (as of January 2026)", h2),
+    table([
+        ["Name", "Party", "Status"],
+        ["Karen Molina", "Republican", "Sitting Vice President and the front-runner"],
+        ["Arianna Cummings", "Democrat", "Publicly weighing a run; exploratory committee "
+                                         "planned after the midterms (launched early, "
+                                         "Ep #0129)"],
+        ["Marc-Anthony Bullock", "Democrat (with Republican values)",
+         "SECRET. Hasn't told a soul"],
+    ], [1.6 * inch, 1.9 * inch, 3.0 * inch]),
+    P("The collision course", h2),
+    *bullets([
+        "Marc and Arianna, best friends since childhood, are headed for the same "
+        "Democratic primary, and neither knows it yet.",
+        "Arianna's buried secrets are buried by Marc. His biggest secret, Blackwater, is "
+        "the one thing that could end any campaign.",
+        "Martin, a Republican, would do anything to stop his cousin from reaching the "
+        "White House.",
     ]),
 ]
 

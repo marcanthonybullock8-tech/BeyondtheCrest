@@ -4,6 +4,7 @@ import datetime as dt
 from reportlab.lib.units import inch
 from reportlab.platypus import PageBreak, Spacer, KeepTogether
 
+from cast import PARTY, MARC_PLATFORM, MARC_LONG_TERM
 from btc_pdf import (P, h1, h2, body, italic, answer, bullets, table, scene,
                      age_on, long_date, build, cover, PREMIERE)
 
@@ -373,7 +374,11 @@ CHARACTERS = [
             "underboss), Arianna (who keeps plausible deniability), and Grace (who'd hide a "
             "body for him) know. His sister the Chief of Police does not.",
             "<b>Emma &amp; Victoria.</b> He has ZERO idea he is their father.",
+            "<b>The White House.</b> He secretly plans to run for President in 2028. He "
+            "hasn't told anyone, not Amond, not Grace, and not Arianna, who is weighing a "
+            "run of her own.",
         ],
+        politics=True,
         voice=("MARC-ANTHONY", ("warm smile, eyes gone cold", "I love everybody, man. "
                                 "That's the problem. You touched somebody I love.")),
     ),
@@ -673,6 +678,10 @@ story += [P("Master Age Ledger", h1),
           PageBreak()]
 
 # ---------------- CHARACTER PROFILES ----------------
+CODES = dict(zip((c["name"] for c in CHARACTERS),
+                 ["VD", "JD", "AL", "TD", "JO", "PO", "MO", "ML", "RB", "NB", "EL", "MA",
+                  "GR", "AM", "AR", "ES", "HD", "JJ", "EM", "VI", "LY"]))
+assert len(CODES) == len(CHARACTERS)
 for c in CHARACTERS:
     if "family" in c:
         story.append(P(c["family"], h1))
@@ -681,12 +690,22 @@ for c in CHARACTERS:
               f"• <b>Looks:</b> {c['looks']}"),
             P(f"<b>Title:</b> {c['title']}"),
             P(f"<b>Ties:</b> {c['ties']}"),
+            P(f"<b>Political party:</b> {PARTY[CODES[c['name']]]}"),
             P(c["who"])]
     story.append(KeepTogether(head))
     story.append(P("<b>Backstory</b>"))
     story += bullets(c["back"])
     if "dream" in c:
         story.append(P(f"<b>The Dream:</b> {c['dream']}"))
+    if c.get("politics"):
+        story.append(P("<b>Politics (SECRET 2028 PRESIDENTIAL AMBITION)</b>"))
+        story.append(P("A Democrat with Republican values who believes in bipartisanship. "
+                       "He secretly wants to run for President in the 2028 election; he'd "
+                       "be 36 on Inauguration Day, January 20, 2029, so he's eligible. "
+                       "The things he believes in and will 100% accomplish, zero questions "
+                       "asked:"))
+        story += bullets(MARC_PLATFORM)
+        story.append(P(f"<b>Long-term goal:</b> {MARC_LONG_TERM}"))
     story.append(P("<b>Secrets &amp; Story Engines</b>"))
     story += bullets(c["secrets"])
     who, line = c["voice"]
@@ -792,10 +811,6 @@ story += [P("Continuity Fixes Applied", h1),
               "and Harmony swore never to tell. The hidden layer underneath: Harmony wanted "
               "the twins near their real father. It stays sealed through Season 1 and is "
               "teased for Season 2.",
-          ]),
-          P("Still Open", h1),
-          *bullets([
-              "<b>Jasmine's party affiliation.</b>",
           ]),
           ]
 

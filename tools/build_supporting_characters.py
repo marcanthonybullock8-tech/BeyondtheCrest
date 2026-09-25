@@ -4,7 +4,7 @@ from collections import Counter
 from reportlab.platypus import PageBreak, KeepTogether, Spacer
 
 from btc_pdf import P, h1, h2, italic, bullets, scene, age_on, long_date, build, cover
-from cast import CAST
+from cast import CAST, PARTY
 from season1_episodes import EPISODES, full_cast
 
 OUT = "docs/10_Supporting_Characters.pdf"
@@ -334,7 +334,7 @@ for title, intro, people in SECTIONS:
             P(name.upper(), h2),
             P(life),
             P(f"<b>Role:</b> {role} • <b>Category:</b> {cat} • "
-              f"<b>S1 episodes:</b> {eps}"),
+              f"<b>S1 episodes:</b> {eps} \u2022 <b>Party:</b> {PARTY[code]}"),
             P(who),
         ]))
         story += bullets(back)

@@ -6,7 +6,7 @@ from reportlab.platypus import PageBreak, Spacer, KeepTogether
 
 from btc_pdf import (P, h1, h2, body, italic, answer, bullets, table, scene,
                      age_on, long_date, build, cover)
-from cast import CAST
+from cast import CAST, PARTY
 
 OUT = "docs/06_The_Smilley_Family.pdf"
 D = dt.date
@@ -174,7 +174,8 @@ for code, title, who, back, voice in PROFILES:
     name, born, died, cat, group, role = CAST[code]
     head = [P(name.upper(), h2),
             P(f"<b>Born:</b> {long_date(born)} • <b>Age:</b> {age_on(born)}"),
-            P(f"<b>Title:</b> {title}"), P(who)]
+            P(f"<b>Title:</b> {title}"),
+            P(f"<b>Political party:</b> {PARTY[code]}"), P(who)]
     story.append(KeepTogether(head))
     story += bullets(back)
     story += scene("IN THEIR OWN WORDS", [voice])

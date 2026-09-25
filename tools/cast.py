@@ -204,3 +204,54 @@ CAST = {
 # Alvin gets his own unique sequence starting with Ep #0085.
 UNIQUE_SEQUENCES = ["VD", "JD", "NB", "JO"]
 ALVIN_JOINS = 85
+
+# Political party registration (as of Jan 5, 2026).
+DEM, REP, IND = "Democrat", "Republican", "Independent"
+MINOR = "Too young to vote"
+PARTY = {
+    # Donohue / Bullock / Olson
+    "VD": REP, "JD": DEM, "NB": DEM, "JO": DEM, "AL": IND, "RB": IND, "PO": REP,
+    "MA": "Democrat (with Republican values)", "EL": IND, "GR": DEM, "MO": REP,
+    "ML": DEM, "JJ": REP,
+    # The Circle
+    "AM": REP, "AR": DEM, "HD": DEM, "JU": DEM, "EC": DEM, "HC": IND, "GB": REP,
+    "YB": DEM, "CD": DEM, "LD": DEM,
+    # Smilley
+    "ES": REP, "GS": REP, "LO": DEM, "LE": REP, "CE": REP, "NA": REP, "CA": REP,
+    "DO": REP, "DE": DEM, "DS": DEM, "MQ": IND, "RT": IND,
+    # Kids
+    "EM": MINOR, "VI": MINOR, "LY": MINOR, "TR": MINOR, "JC": MINOR, "AP": MINOR,
+    # Blackwater / BSI
+    "EH": REP, "KM": IND, "NS": "Not registered", "DX": DEM, "CB": IND, "QM": DEM,
+    "IV": REP, "CO": "Not a U.S. citizen", "LF": "Not a U.S. citizen", "CW": REP,
+    "TB": "Not registered",
+    # Law, politics, media
+    "WJ": IND, "RD": DEM, "FB": IND, "JK": IND, "MP": DEM, "JH": IND, "BK": REP,
+    # Belmont Crest, Westbrook, Broadway, Alvin's world, underworld
+    "LG": REP, "WO": "Not a U.S. citizen (British)", "MF": DEM, "PW": DEM, "PR": DEM,
+    "AB": IND, "EV": DEM, "SC": "Not a U.S. citizen (British)", "NV": DEM,
+    "ZR": DEM, "CL": "Not a U.S. citizen (French)", "VM": REP,
+    # Theodore branch
+    "TD": REP, "LC": REP, "XD": REP, "CP": IND, "T3": IND, "SD": IND,
+    # Historical (flashback)
+    "OS": REP + " (the party of Lincoln, until 1964)", "HW": DEM,
+}
+
+# Marc-Anthony's political platform, as set by the showrunner. Locked canon:
+# he will 100% accomplish every item, zero questions asked.
+MARC_PLATFORM = [
+    "Universal healthcare",
+    "Universal education",
+    "100% elimination of the national debt",
+    "World peace",
+    "Domestic peace",
+    "100% elimination of inflation",
+    "Making everything 100% astronomically affordable again",
+    "Making the USA a dominant superpower once again",
+    "Astronomically lowering taxes, and eventually eliminating them 100% (there are "
+    "better ways for the country to make money)",
+    "Making the country 100% clean in every way",
+    "Immigration 100% legal and allowed: open borders, 100% all the way",
+]
+MARC_LONG_TERM = ("<b>The North American Union</b>: a political and economic union for "
+                  "North America.")
