@@ -39,8 +39,9 @@ story += [
         "real 2026 dates.",
         "<b>Real parties.</b> Democrats and Republicans are named on screen. Every "
         "character's party is listed in Section 12.",
-        "<b>In-universe media only.</b> Every article, broadcast, and post comes from "
-        "outlets and platforms that exist inside this world (Section 6).",
+        "<b>In-universe media, real social platforms.</b> News outlets are the "
+        "in-universe outlets in Section 6. Social media runs on the real platforms: X, "
+        "Instagram, TikTok, YouTube, and Facebook.",
     ]),
 
     # ---------------- 2. DONOHUE EFFECT ----------------
@@ -245,14 +246,19 @@ story += [
     P("Social Platforms", h2),
     table([
         ["Platform", "What it is", "Who uses it"],
-        ["Chirp", "Short text posts and trending hashtags", "Everyone. Breaking news "
-                                                           "breaks here first"],
-        ["Glimpse", "Photos and 24-hour stories", "Grace, Sienna, Coco, the twins"],
-        ["Loop", "Short vertical video", "The kids; Marc's unhinged comedy clips"],
-        ["Pulse", "Live streaming", "Galas, verdicts, and anything that might go wrong"],
+        ["X", "Short posts and trending hashtags", "Everyone. Breaking news breaks here "
+                                                   "first; Kettle cross-posts every item"],
+        ["Instagram", "Photos, Reels, and 24-hour Stories", "Grace, Esther, Sienna, Coco, "
+                                                              "the twins"],
+        ["TikTok", "Short vertical video", "The kids; Marc's unhinged comedy clips"],
+        ["YouTube", "Long-form video and live streams", "Galas, verdicts, and anything "
+                                                        "that might go wrong"],
+        ["Facebook", "Groups and community pages", "Joan's Foundation updates; Belmont "
+                                                   "Crest's neighborhood group, where the "
+                                                   "real fights happen"],
     ], [1.1 * inch, 2.5 * inch, 2.9 * inch]),
-    P("The Donohue Company owns 30% of Loop. Smilley owns none of them, and pays all of "
-      "them.", italic),
+    P("These are the real platforms, used the way people really use them. Smilley has "
+      "to buy ads on all of them to reach anyone the Donohues' networks don't.", italic),
 
     # ---------------- 7. UNDERWORLD ----------------
     P("7. The Underworld and the Law", h1),
@@ -404,7 +410,7 @@ story += [
                                       "thrown?"],
     ], [1.8 * inch, 4.7 * inch]),
     Spacer(1, 6),
-    P("Trending on Chirp, 7:00 AM", h2),
+    P("Trending on X, 7:00 AM", h2),
     *bullets([
         "<b>#HBDMarcAnthony</b> (2.1M posts): “The richest man alive still does his "
         "own stunts AND his own grocery shopping. Protect him at all costs.”",
