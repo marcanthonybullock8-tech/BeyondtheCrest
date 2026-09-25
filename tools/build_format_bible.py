@@ -119,9 +119,12 @@ story += [P("0. Locked Canon (Story Rules)", h1),
               "<b>Story frame year:</b> 2026 is our storytelling “present.” The story "
               "begins on the premiere date and moves forward in real time from there.",
               "<b>In-universe start date:</b> Monday, January 5, 2026 (Episode #0001).",
-              "<b>Storytelling formats:</b> Hollywood trade and news-media articles and "
-              "headlines, social media, internet coverage, and heavy character-driven "
-              "dialogue written in screenplay format.",
+              "<b>One layer only:</b> The daytime soap opera <i>is</i> the story. There is no "
+              "separate real-world or behind-the-scenes layer.",
+              "<b>Storytelling formats:</b> Hollywood media and news media articles and "
+              "headlines, social media, and the internet all exist <b>inside the story's "
+              "universe</b> and cover the characters and events of the show. Alongside them "
+              "runs heavy character-driven dialogue written in screenplay format.",
               "<b>Timeline:</b> Every event carries a date and time. Every character's age "
               "is calculated from a locked birthday on the date of the scene.",
               "<b>Tone:</b> Realistic to real life; creative, entertaining, dramatic, and "
@@ -308,18 +311,24 @@ story += [PageBreak(),
 
 # ---------------- 7. MULTI-PLATFORM STORYTELLING ----------------
 story += [P("7. Multi-Platform Storytelling Toolkit", h1),
-          P("Each story beat can be told through one or more of these formats, all "
-            "timestamped and all canon:"),
+          P("The soap opera is the story. Every article, headline, post, and web page "
+            "below exists <b>inside the story's universe</b>, written by in-universe "
+            "outlets, reporters, and users about in-universe people and events. Nothing "
+            "here is real-world coverage of the show. Every item is timestamped and canon, "
+            "and what the characters read, post, or see online can drive the plot."),
           table([
-              ["Format", "Use"],
+              ["Format", "In-Universe Use"],
               ["Screenplay scenes", "Primary vehicle; character-driven dialogue"],
-              ["Hollywood trade articles", "Casting news, ratings, Emmy coverage, behind the scenes "
-               "(Deadline / Variety / THR / Soap Opera Digest style)"],
-              ["In-universe news media", "Atlanta local news, business press on Donohue holdings, "
-               "society pages, legal filings"],
-              ["Social media", "Character posts, fan reactions, trending hashtags "
-               "(e.g., #BeyondTheCrest, #BTCFam)"],
-              ["Internet", "Blogs, forums, recaps, message boards, gossip sites"],
+              ["Hollywood media", "Entertainment and celebrity press covering the Donohues and "
+               "other characters: galas, red carpets, celebrity relationships, and any "
+               "family ventures in film, music, fashion, or media"],
+              ["News media", "Atlanta and national news, business and financial press on "
+               "Donohue holdings, society pages, politics, crime and court coverage, "
+               "legal filings"],
+              ["Social media", "Characters' own posts, DMs, and livestreams; public reactions; "
+               "trending hashtags about the family and the community"],
+              ["Internet", "Gossip blogs, message boards, anonymous leak sites, search "
+               "results, viral videos, online reviews"],
           ], [1.9 * inch, 4.6 * inch]),
           ]
 
