@@ -37,7 +37,7 @@ EPISODES = [
      "“publish” as <i>The Tea Kettle ATL</i>. And at 11:59 PM, alone in his "
      "study, Marc opens a new leather notebook and writes one word on the first page: "
      "<b>2028</b>.",
-     "MA VD JD NB RB JO PO EL JJ GR MO ML AM AR ES HD LY RD WO TB"),
+     "MA VD JD NB RB JO PO EL JJ GR MO ML AM AR ES HD LY RD WO TB MF EM VI"),
     (False, None,
      "The victim is Terrence “T-Bone” Gaines. His burner holds one contact: "
      "“ARCHITECT.” Jasmine storms into Victor's study over the Covenant. At "
@@ -49,7 +49,7 @@ EPISODES = [
      "Smilley Plaza: Leonard reveals that the Crown License, the Donohue deal behind 41% "
      "of Smilley revenue, expires August 31. Donohue won't auto-renew, and Marc will run "
      "the talks. Gus names Esther lead negotiator. She goes pale. Flashback: at 2:00 AM on "
-     "January 4, Peter stitches Martin's split knuckles and asks no questions.",
+     "January 5, Peter stitches Martin's split knuckles and asks no questions.",
      "LE GS LO CE NA CA DS DO ES PO MO JO DE"),
     (False, None,
      "Marc's first day as President: he charms 4,000 employees and fires a VP for mocking "
