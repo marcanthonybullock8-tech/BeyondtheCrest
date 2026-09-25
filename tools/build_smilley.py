@@ -61,7 +61,8 @@ TREE = [
      "Founders"),
     ("└ Leonard Smilley ∞ Celeste Beaumont", "m. " + long_date(D(1984, 6, 30)),
      "Chairman &amp; CEO / Foundation Chair"),
-    ("   └ Nathaniel ∞ Monique Carter", "m. 2010", "Their son: Trey (b. 2012)"),
+    ("   └ Nathaniel (Leonard Nathaniel Smilley Jr.) ∞ Monique Carter", "m. 2010",
+     "Their son: Leonard Nathaniel Smilley III, “Trey” (b. 2012)"),
     ("   └ Camille ∞ Dorian Ward", "m. 2016", "No children"),
     ("   └ Esther", "Never married", "Twins Emma &amp; Victoria (b. 2012; "
      "father: Marc-Anthony Bullock, SECRET)"),
@@ -126,7 +127,9 @@ PROFILES = [
      "The Eldest Son Who Was Passed Over. Nathaniel is 40, polished, cold, and patient. He "
      "was raised to be heir and lost the title to his little sister. His RootsKit DNA "
      "division becomes the weapon that exposes her.",
-     ["Morehouse and Stanford MBA. Launched RootsKit in 2017.",
+     ["Born Leonard Nathaniel Smilley Jr., named for his father. He has gone by his "
+      "middle name since kindergarten, because the house only had room for one Leonard.",
+      "Morehouse and Stanford MBA. Launched RootsKit in 2017.",
       "Forms the “Spare Alliance” with Martin Olson (Ep #0058).",
       "Secretly finances Harmony's film to get close to Esther."],
      ("NATHANIEL", ("", "My sister didn't win. Grandfather just hadn't met the real me "
@@ -139,7 +142,9 @@ PROFILES = [
      ("MONIQUE", ("", "Alvin Donohue ended my career over a bar tab. I married up just "
                       "to watch him fall down."))),
     ("TR", "8th grader, Westbrook Academy",
-     "Trey is the Smilley heir's heir's son: charming, cocky, and quick. He is Lyric "
+     "Leonard Nathaniel Smilley III, called Trey because he's the third Leonard in a row: "
+     "grandfather Leonard, father Leonard Jr. (who goes by Nathaniel), and him. He's charming, "
+     "cocky, and quick. He is Lyric "
      "Baker's first crush. Romeo, meet Juliet.",
      ["Classmate of the twins and Lyric.", "Kisses Lyric on the first day of 9th grade "
       "(Ep #0149), and Victoria punches him."],
