@@ -43,6 +43,27 @@ story += [
       "The Tonys • #0116 Juneteenth Jubilee • #0126 Fourth of July • #0133 "
       "World Cup Semifinal • #0139 “1966” flashback • #0170 Finale. "
       "That's 17 of 170, exactly 10%."),
+    P("Sweeps (see Document 01, Section 9)", h2),
+    table([
+        ["Sweeps", "Dates", "Episodes", "What airs"],
+        ["February", "Thu, Jan 29 \u2013 Wed, Feb 25", "#0019\u2013#0038",
+         "Mallory meets Desmond \u2022 RootsKit tests \u2022 THE OLD MAN SAYS: PATIENCE "
+         "\u2022 Robert's 57th and Amond's 34th \u2022 Marc and Esther face off (#0030) "
+         "\u2022 <b>Valentine's Ball slap (#0031)</b> \u2022 Broadway rehearsals \u2022 "
+         "Amond's secret meeting with Martin"],
+        ["May", "Thu, Apr 23 \u2013 Wed, May 20", "#0076\u2013#0095",
+         "Amond calls Martin \u2022 The Club application \u2022 Victoria: \u201cWrong "
+         "answer\u201d \u2022 Tony nominations \u2022 <b>Alvin comes home (#0085)</b> "
+         "\u2022 <b>Mother's Day and the twins' 14th (#0088)</b> \u2022 Elxa destroys "
+         "evidence \u2022 <b>Primary night (#0094)</b> \u2022 Zion Reed (#0095)"],
+        ["July", "Thu, Jun 25 \u2013 Wed, Jul 22", "#0120\u2013#0138",
+         "Victor comes home \u2022 Joan's confession \u2022 <b>The Fourth of July kiss "
+         "(#0126)</b> \u2022 Deuce's trial begins \u2022 Alvin steals the security plan "
+         "\u2022 <b>World Cup semifinal (#0133)</b> \u2022 T-Bone's girlfriend testifies "
+         "\u2022 Marc and Esther's night together (#0138)"],
+    ], [0.8 * inch, 1.5 * inch, 1.0 * inch, 3.2 * inch]),
+    P("The Oscars (#0051), the Tonys (#0107), and Victor's 80th (#0101) stay on their real "
+      "dates just outside sweeps. They are ratings events on their own.", italic),
     PageBreak(),
 ]
 

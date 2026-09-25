@@ -354,6 +354,46 @@ story += [PageBreak(),
           P("CUT TO: MAIN TITLE", sp_act),
           ]
 
+# ---------------- 9. SWEEPS ----------------
+from btc_pdf import SWEEPS  # noqa: E402
+from season1_episodes import season1_calendar  # noqa: E402
+
+cal = season1_calendar()
+
+
+def ep_range(start, end):
+    eps = [n for n, d in enumerate(cal, 1) if start <= d <= end]
+    return f"#{eps[0]:04d} \u2013 #{eps[-1]:04d} ({len(eps)} eps)" if eps else "Season 2"
+
+
+sweep_rows = [["Sweeps period", "Dates", "Season", "Episodes"]]
+for name, start, end in SWEEPS:
+    season = "Season 1" if end <= cal[-1] else "Season 2"
+    sweep_rows.append([name, f"{start:%a, %b} {start.day} \u2013 {end:%a, %b} {end.day}, "
+                             f"{end.year}", season, ep_range(start, end)])
+
+story += [PageBreak(),
+          P("9. Sweeps", h1),
+          P("RECOMMENDATION: Every sweeps period gets the show's biggest swings: weddings, "
+            "returns, reveals, and deaths. Sweeps follow the Nielsen pattern of four weeks, "
+            "Thursday through Wednesday, in February, May, July, and November.", answer),
+          P("Sweeps are the ratings periods that set ad rates for the months that follow, "
+            "so daytime soaps have always scheduled their biggest stories inside them. "
+            "Season 1 runs January to September, so it has three sweeps periods. November "
+            "sweeps fall in Season 2."),
+          table(sweep_rows, [1.4 * inch, 2.4 * inch, 0.9 * inch, 1.8 * inch]),
+          Spacer(1, 6),
+          P("Sweeps rules for the writers' room", h2),
+          *bullets([
+              "Each sweeps period opens on a major turn and closes on a cliffhanger.",
+              "At least one tentpole event episode lands inside every sweeps period.",
+              "Returns, new cast arrivals, and paternity or identity reveals are held for "
+              "sweeps whenever the story calendar allows.",
+              "Events tied to real dates (awards shows, holidays, birthdays) stay on their "
+              "real dates even when they fall just outside sweeps.",
+          ]),
+          ]
+
 doc = SimpleDocTemplate(OUT, pagesize=letter, leftMargin=inch, rightMargin=inch,
                         topMargin=0.9 * inch, bottomMargin=0.9 * inch,
                         title="Beyond the Crest — Series Format Bible",

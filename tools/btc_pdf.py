@@ -119,3 +119,20 @@ def cover(doc_line, extra_lines):
             P(doc_line, sub), Spacer(1, 30),
             P("A Daytime Drama", ParagraphStyle("x", parent=sub, textColor=INK)),
             Spacer(1, 90)] + [P(x, center) for x in extra_lines]
+
+
+# Nielsen sweeps: four-week Thursday-to-Wednesday measurement periods.
+SWEEPS = [
+    ("February Sweeps", dt.date(2026, 1, 29), dt.date(2026, 2, 25)),
+    ("May Sweeps", dt.date(2026, 4, 23), dt.date(2026, 5, 20)),
+    ("July Sweeps", dt.date(2026, 6, 25), dt.date(2026, 7, 22)),
+    ("November Sweeps", dt.date(2026, 10, 22), dt.date(2026, 11, 18)),
+    ("February Sweeps", dt.date(2027, 1, 28), dt.date(2027, 2, 24)),
+    ("May Sweeps", dt.date(2027, 4, 22), dt.date(2027, 5, 19)),
+    ("July Sweeps", dt.date(2027, 6, 24), dt.date(2027, 7, 21)),
+]
+
+
+def sweeps_on(d):
+    """Name of the sweeps period containing date d, or None."""
+    return next((name for name, s, e in SWEEPS if s <= d <= e), None)

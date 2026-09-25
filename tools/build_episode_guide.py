@@ -3,7 +3,8 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.platypus import PageBreak, KeepTogether
 
-from btc_pdf import P, h1, h2, body, cell, bullets, table, long_date, build, cover, GOLD
+from btc_pdf import (P, h1, h2, body, cell, answer, bullets, table, long_date, build, cover,
+                     GOLD, sweeps_on)
 from cast import CAST
 from season1_episodes import EPISODES, DARK_DAYS, full_cast, season1_calendar
 
@@ -42,6 +43,9 @@ story += [
         "<b>Story time runs with air time.</b> Unless noted, an episode takes place on "
         "its air date. Weekend events (the Oscars, the Tonys, Victor's 80th) air on the "
         "next weekday with the story date noted.",
+        "<b>SWEEPS</b> marks every episode that airs during a Nielsen sweeps period: "
+        "February (Eps #0019–#0038), May (#0076–#0095), and July "
+        "(#0120–#0138). See Document 01, Section 9.",
         "★ marks an event episode, one of the 17 standalone-leaning episodes that make "
         "up 10% of the season.",
         "<b>Cast</b> lists every character in the episode: the headline story plus that "
@@ -51,13 +55,22 @@ story += [
     ]),
 ]
 
-month = None
+month, sweep = None, None
 for n, ((event, note, synopsis, codes), d) in enumerate(zip(EPISODES, cal), start=1):
     if d.month != month:
         month = d.month
         story.append(P(f"{d:%B %Y}", h1))
+    now = sweeps_on(d)
+    if now != sweep:
+        if sweep:
+            story.append(P(f"■ END OF {sweep.upper()}", answer))
+        if now:
+            story.append(P(f"■ {now.upper()} BEGIN", answer))
+        sweep = now
     star = " ★" if event else ""
     head = f"#{n:04d}{star} — {long_date(d)}"
+    if now:
+        head += " • <font color='#3A1F3D'>SWEEPS</font>"
     if note:
         head += f" <font size='9'>(Story: {note})</font>"
     cast = ", ".join(short(c) for c in full_cast(n))
